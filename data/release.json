@@ -1,8 +1,8 @@
 {
   "version": "contact-paper-evaluation-v1",
   "recordings": 493,
-  "primary_ratings": "P is the mean of both HH participants; C=(P+S)/2; I is not a scoring target",
-  "evaluation_split": "Final retrospective speaker-disjoint evaluation split; not a newly untouched holdout",
+  "primary_ratings": "P is the MOS of HH participants; C=(P+S)/2; I is not a scoring target",
+  "evaluation_split": "Speaker-disjoint evaluation split",
   "talking_turns": "Author-default thresholds and unweighted available-event macro",
   "checkpoint": "Single frozen-affect timing/silence checkpoint at step 4000",
   "sha256": {
