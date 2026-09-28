@@ -19,9 +19,8 @@ datasets/
 ## CONTACT evaluation audio
 
 [Audio examples](https://github.com/review-anonymous-git/contact-samples) are
-distributed separately. Examples are not the full benchmark. The full audio
-download location is not yet configured in this repository; no command here
-claims to download all evaluation recordings.
+available separately. A download link for the full benchmark will be added
+when available.
 
 Create the directory layout and an inventory of the 493 paper recordings:
 
@@ -32,10 +31,8 @@ python -m contact.dataset init
 Place the corresponding audio at those locations. A stereo file must have one
 speaker per channel. Alternatively, edit `recordings.csv`: leave `audio` empty
 and fill `speaker_a` and `speaker_b` with two synchronized mono files. Paths are
-relative to the CSV, or absolute. Preserve the recording's original channel
-assignment. Do not substitute a mixed track, remove pauses, concatenate turns,
-or silently trim unequal tracks. Archive filenames and speaker names may differ
-from this layout; map them explicitly in the CSV.
+relative to the CSV, or absolute. Keep the speaker-channel assignment and
+pauses intact. Map the downloaded filenames to the corresponding CSV entries.
 
 The manifest format is:
 
@@ -81,13 +78,9 @@ python -m contact.evaluate \
 The first two commands need no human MOS. The last command joins predictions
 to the released ratings. It requires all 493 IDs, not just the audio examples.
 
-For paper reproduction, `data/audio_preprocessing.json` fixes each recording's
-observed VAD timeline, response-merge setting and audio checksum. These are
-audio-derived target annotations, not model scores or human MOS. Mimi features
-and A/V teacher outputs are still computed from the audio. Recomputing VAD with
-a different resampler or boundary-rounding rule can change target intervals, so
-it is not a byte-equivalent reproduction. For new recordings, omit `--protocols`
-to run Silero VAD and the default response-window builder directly.
+CONTACT preprocessing uses the VAD annotations and recording settings in
+`data/audio_preprocessing.json`; Mimi features and A/V labels are computed from
+the audio. For new recordings, omit `--protocols` to run Silero VAD.
 
 Preprocessing retains its models across recordings. Inference writes
 per-recording results when `--resume-dir` is given. Interrupted jobs can reuse

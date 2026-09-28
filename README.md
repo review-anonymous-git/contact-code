@@ -3,9 +3,11 @@
 Code for **CONTACT: A Human-Grounded Benchmark and Surprisal-Based Predictive
 Scorer for Conversational Naturalness**.
 
-The repository contains the final predictor, recording-level readouts, and the
-scores and ratings needed to reproduce the evaluation tables. Training scripts
-are not included. Model weights are distributed separately.
+![CONTACT graphical abstract](assets/contact.png)
+
+This release includes audio preprocessing, checkpoint inference, and evaluation.
+Model weights and audio are downloaded separately. The recording scores and
+ratings used in the evaluation tables are included in `data/`.
 
 ## Installation
 
@@ -14,12 +16,16 @@ Use Python 3.10 and run commands from this directory.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -c constraints.txt -e '.[test]'
+python -m pip install -r requirements.txt
 ```
 
-This installs the CPU evaluator. For model inference, install `.[inference]`;
-for audio preprocessing, install `.[audio]`. The audio path requires a CUDA GPU
-because the official affect teacher uses CUDA internally.
+This installs the package with audio, inference and test dependencies.
+Audio preprocessing requires a CUDA GPU for the affect teacher. If you only
+need to reproduce tables from the included scores, use the smaller CPU install:
+
+```bash
+python -m pip install -c constraints.txt -e '.[test]'
+```
 
 ## Reproduce the tables
 
@@ -40,18 +46,15 @@ python -m contact.evaluate --data data --output outputs/bootstrap \
   --bootstrap 20000 --seed 20260925
 ```
 
-The additional CSV files contain differences, 95% confidence intervals and
-two-sided, unadjusted p-values. Baseline comparisons use the strongest observed
-baseline at each endpoint. These are exploratory comparisons on the fixed
-retrospective split, not a new blind test.
+Bootstrap outputs contain paired differences, 95% confidence intervals and
+unadjusted two-sided p-values. Comparisons use the strongest observed baseline
+at each endpoint on the retrospective evaluation split.
 
 ## Score audio
 
-Downloaded audio belongs in `datasets/`; it is separate from the evaluation
-CSVs in `data/`. The three CONTACT subset folders and a Seamless Interaction
-training-data placeholder are provided. See [datasets/README.md](datasets/README.md)
-for manifest creation, batch preprocessing, sharding and resumable inference.
-Audio scoring does not require human MOS labels.
+Place downloaded audio in `datasets/`. See [datasets/README.md](datasets/README.md)
+for the three CONTACT subsets, the Seamless Interaction data source, and
+batch scoring commands. Scoring new audio does not require MOS labels.
 
 ### Weights
 
@@ -63,14 +66,13 @@ python -m contact.checkpoint --checkpoint checkpoints/contact.pt
 
 The download link will be added to [checkpoints/manifest.json](checkpoints/manifest.json).
 Weights and generated caches are excluded from Git. The checkpoint contains
-inference parameters only; it is not an optimizer-resume checkpoint.
+the predictor's inference parameters.
 
 ### Audio preparation
 
-Install the audio dependencies and the pinned affect-teacher wrapper:
+Install the affect-teacher wrapper at the following revision:
 
 ```bash
-python -m pip install -c constraints.txt -e '.[audio]'
 git clone https://github.com/tiantiaf0627/vox-profile-release.git third_party/vox-profile-release
 git -C third_party/vox-profile-release checkout 85100e60844a3f324a139e24fb9225aa6d8e45d1
 ```
@@ -109,10 +111,8 @@ Cache paths are relative to the manifest. Each cache contains two Mimi feature
 arrays, VAD, affect targets and a checksum manifest. Preparation refuses to
 overwrite an existing cache. Inference works on CPU as well, but is slower.
 
-For VAD settings, future-activity/silence labels and soft A/V targets, see
-[docs/preprocessing.md](docs/preprocessing.md). All corresponding target
-construction functions are included; no access to the original training audio
-is needed to score new recordings.
+VAD, future-activity, silence and soft A/V targets are described in
+[docs/preprocessing.md](docs/preprocessing.md).
 
 If an inference CSV covers all 493 released recording IDs, evaluate it with
 `python -m contact.evaluate --predictions outputs/predictions.csv --output outputs/rescored`.
@@ -164,11 +164,9 @@ this same checkpoint; they are not separately retrained models.
 and conditions. Human speakers are disjoint across dev/test, including across
 subsets. The evaluator checks IDs, checksums and speaker disjointness.
 
-The included `ratings.csv` reproduces the model-results table: H–H Participant
-is the mean of both participants; Combined is `(Participant + Supervisor)/2`.
-Independent-evaluator scores are not included in Combined. This file should
-not be mixed with role-selected participant ratings used in separate agreement
-analyses.
+`ratings.csv` contains Participant (P), Supervisor (S), and Combined (C) MOS,
+where `C = (P + S) / 2`. Rating definitions are recorded in
+[data/release.json](data/release.json).
 
 Paired accuracy compares manipulated recordings with the natural recording
 from the same session. C-index compares all natural–manipulated pairs within
