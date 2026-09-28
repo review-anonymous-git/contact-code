@@ -13,14 +13,14 @@ datasets/
     hai/<recording_id>/stereo.wav
   seamless_interaction/
     raw/
-    recordings.csv
+    training_manifest.csv
 ```
 
 ## CONTACT evaluation audio
 
+Use the folders below for the downloaded CONTACT dataset.
 [Audio examples](https://github.com/review-anonymous-git/contact-samples) are
-available separately. A download link for the full benchmark will be added
-when available.
+provided separately.
 
 Create the directory layout and an inventory of the 493 paper recordings:
 
@@ -122,5 +122,5 @@ manifest can instead be scored separately, without sharding it a second time.
 ## Training audio
 
 See [seamless_interaction/README.md](seamless_interaction/README.md) for the
-official source and the training-audio placeholder. No training audio is needed
-to evaluate the released checkpoint.
+official source and the exact 28,038-recording training manifest. No training
+audio is needed to evaluate the released checkpoint.

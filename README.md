@@ -5,9 +5,13 @@ Scorer for Conversational Naturalness**.
 
 ![CONTACT graphical abstract](assets/contact.png)
 
-This release includes audio preprocessing, checkpoint inference, and evaluation.
+This release includes audio preprocessing, checkpoint inference, recording-level
+scoring, and metric computation.
 Model weights and audio are downloaded separately. The recording scores and
 ratings used in the evaluation tables are included in `data/`.
+The exact training inventory is included; a training launcher and baseline
+inference pipelines are not bundled. Baseline protocols and released scores
+are provided for evaluation.
 
 ## Installation
 
@@ -155,6 +159,26 @@ in [contact/model.py](contact/model.py), and the fixed settings in
 [configs/scoring.json](configs/scoring.json). Affective and overall scores are
 not reported for the H–H timing subset. Component ablations remove scores from
 this same checkpoint; they are not separately retrained models.
+
+### Development-set weight selection
+
+To run the development-only grid search:
+
+```bash
+python -m contact.select_fusion --data data --output outputs/fusion_selection
+```
+
+This saves all candidate metrics, selected weights and fitted normalizers.
+It does not change the fixed paper settings. See
+[docs/fusion_selection.md](docs/fusion_selection.md) for the grid and objective.
+
+## Training inventory
+
+[training_manifest.csv](datasets/seamless_interaction/training_manifest.csv)
+lists the exact 28,038 training recordings (1,635.831 dialogue hours, rounded
+to 1,636 hours), with upstream IDs, paired audio paths and durations. Audio
+download and preprocessing instructions are in
+[datasets/seamless_interaction/README.md](datasets/seamless_interaction/README.md).
 
 ## Evaluation data
 
