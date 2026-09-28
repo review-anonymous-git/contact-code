@@ -1,8 +1,12 @@
 # Model weights
 
-Place `contact.pt` here. The weights are distributed separately from Git.
-`manifest.json` records the file size and SHA-256 checksum; its download URL
-will be filled in when the model archive is uploaded.
+Download [contact.zip](https://github.com/review-anonymous-git/contact-code/releases/download/v1.0/contact.zip)
+from the [v1.0 release](https://github.com/review-anonymous-git/contact-code/releases/tag/v1.0).
+Extract the archive and place `contact.pt` in this directory. The weights are
+distributed as a Release attachment, not as a Git-tracked file.
+
+`manifest.json` records the download URL and checksums. The top-level size and
+SHA-256 describe the extracted `contact.pt`; the `archive` entry describes the ZIP.
 
 The file contains the final predictor's parameters, without optimizer state,
 training caches or machine-specific paths. Mimi and the dimensional-affect

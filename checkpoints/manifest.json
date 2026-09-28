@@ -5,5 +5,11 @@
   "tensors": 403,
   "bytes": 2047782804,
   "sha256": "aa57b1e405865cfa4788927675599859ca608c80b84b3c3252aa67d52f30ba35",
-  "download_url": null
+  "download_url": "https://github.com/review-anonymous-git/contact-code/releases/download/v1.0/contact.zip",
+  "archive": {
+    "filename": "contact.zip",
+    "format": "zip",
+    "bytes": 1647685197,
+    "sha256": "8a2e9283aaaf71b831ea2ca71270ad51a0ac2a3b2743e93cc4655b11277fde52"
+  }
 }

@@ -58,13 +58,17 @@ batch scoring commands. Scoring new audio does not require MOS labels.
 
 ### Weights
 
-Place the released model at `checkpoints/contact.pt`. Check its integrity with:
+Download [contact.zip](https://github.com/review-anonymous-git/contact-code/releases/download/v1.0/contact.zip)
+from the [v1.0 release](https://github.com/review-anonymous-git/contact-code/releases/tag/v1.0).
+Extract the archive and place `contact.pt` at `checkpoints/contact.pt`, then
+verify the extracted model:
 
 ```bash
 python -m contact.checkpoint --checkpoint checkpoints/contact.pt
 ```
 
-The download link will be added to [checkpoints/manifest.json](checkpoints/manifest.json).
+File sizes and SHA-256 checksums for the model and ZIP archive are listed in
+[checkpoints/manifest.json](checkpoints/manifest.json).
 Weights and generated caches are excluded from Git. The checkpoint contains
 the predictor's inference parameters.
 
