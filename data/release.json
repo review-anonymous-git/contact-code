@@ -1,0 +1,16 @@
+{
+  "version": "contact-paper-evaluation-v1",
+  "recordings": 493,
+  "primary_ratings": "P is the mean of both HH participants; C=(P+S)/2; I is not a scoring target",
+  "evaluation_split": "Final retrospective speaker-disjoint evaluation split; not a newly untouched holdout",
+  "talking_turns": "Author-default thresholds and unweighted available-event macro",
+  "checkpoint": "Single frozen-affect timing/silence checkpoint at step 4000",
+  "sha256": {
+    "splits.csv": "9528b7e917a11960dd0b203eb90c62913b136259efc298f6536d8a9402b46510",
+    "ratings.csv": "72d260510260797b8d02eda88ce3cfd602089f2cc728a714df001bdf002f366a",
+    "scores.csv": "b0f771c6684ef3a95492a13e264d1f38a3c69f0e5f694c122d09e668d581cb58",
+    "normalizers.json": "aa552b7d4479ce2590ea5c0dfab4390a67dd2a7d69e0ea4a65b64e659e5c1d67",
+    "affect_prior.json": "50c8d422846d8d7c414a5b58fc07bd6d5eea7519868573d46e929ce04880b7da",
+    "audio_preprocessing.json": "e298ba954219c2a2beef4874918eaad63a6a2c72e2c1cd80e76dc94dd318b4f0"
+  }
+}

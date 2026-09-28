@@ -1,0 +1,494 @@
+recording_id,corpus,split,group_id,session_id,component,human_speaker_ids,condition,model,relationship
+hai__recording-1,hai,test,hai:session_000,session_000,013;014,014,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-3,hai,test,hai:session_000,session_000,013;014,014,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-5,hai,test,hai:session_000,session_000,013;014,014,human-ai,cascaded,unknown
+hai__recording-6,hai,test,hai:session_000,session_000,013;014,014,human-ai,GPT Live,unknown
+hai__recording-7,hai,test,hai:session_000,session_000,013;014,014,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-9,hai,test,hai:session_001,session_001,025,025,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-10,hai,test,hai:session_001,session_001,025,025,human-ai,cascaded,unknown
+hai__recording-11,hai,test,hai:session_001,session_001,025,025,human-ai,GPT Live,unknown
+hai__recording-12,hai,test,hai:session_001,session_001,025,025,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-14,hai,test,hai:session_002,session_002,026;095,026,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-15,hai,test,hai:session_002,session_002,026;095,026,human-ai,cascaded,unknown
+hai__recording-16,hai,test,hai:session_002,session_002,026;095,026,human-ai,GPT Live,unknown
+hai__recording-17,hai,test,hai:session_002,session_002,026;095,026,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-19,hai,test,hai:session_002,session_002,026;095,026,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-20,hai,test,hai:session_003,session_003,027,027,human-ai,cascaded,unknown
+hai__recording-21,hai,test,hai:session_003,session_003,027,027,human-ai,GPT Live,unknown
+hai__recording-22,hai,test,hai:session_003,session_003,027,027,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-24,hai,test,hai:session_003,session_003,027,027,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-25,hai,test,hai:session_003,session_003,027,027,human-ai,cascaded,unknown
+hai__recording-26,hai,test,hai:session_004,session_004,028,028,human-ai,GPT Live,unknown
+hai__recording-27,hai,test,hai:session_004,session_004,028,028,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-29,hai,test,hai:session_004,session_004,028,028,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-30,hai,test,hai:session_004,session_004,028,028,human-ai,cascaded,unknown
+hai__recording-31,hai,test,hai:session_004,session_004,028,028,human-ai,GPT Live,unknown
+hai__recording-33,hai,test,hai:session_005,session_005,029,029,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-37,hai,test,hai:session_005,session_005,029,029,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-38,hai,test,hai:session_005,session_005,029,029,human-ai,cascaded,unknown
+hai__recording-39,hai,test,hai:session_005,session_005,029,029,human-ai,GPT Live,unknown
+hai__recording-42,hai,test,hai:session_005,session_005,029,029,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-47,hai,test,hai:session_006,session_006,032,032,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-48,hai,test,hai:session_006,session_006,032,032,human-ai,cascaded,unknown
+hai__recording-49,hai,test,hai:session_006,session_006,032,032,human-ai,GPT Live,unknown
+hai__recording-50,hai,test,hai:session_006,session_006,032,032,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-52,hai,dev,hai:session_007,session_007,033,033,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-53,hai,dev,hai:session_007,session_007,033,033,human-ai,cascaded,unknown
+hai__recording-54,hai,dev,hai:session_007,session_007,033,033,human-ai,GPT Live,unknown
+hai__recording-55,hai,dev,hai:session_007,session_007,033,033,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-57,hai,dev,hai:session_007,session_007,033,033,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-61,hai,test,hai:session_008,session_008,042,042,human-ai,cascaded,unknown
+hai__recording-62,hai,test,hai:session_008,session_008,042,042,human-ai,GPT Live,unknown
+hai__recording-63,hai,test,hai:session_008,session_008,042,042,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-66,hai,test,hai:session_008,session_008,042,042,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-67,hai,test,hai:session_008,session_008,042,042,human-ai,cascaded,unknown
+hai__recording-68,hai,test,hai:session_009,session_009,043,043,human-ai,GPT Live,unknown
+hai__recording-69,hai,test,hai:session_009,session_009,043,043,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-71,hai,test,hai:session_009,session_009,043,043,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-72,hai,test,hai:session_009,session_009,043,043,human-ai,cascaded,unknown
+hai__recording-73,hai,test,hai:session_009,session_009,043,043,human-ai,GPT Live,unknown
+hai__recording-75,hai,dev,hai:session_010,session_010,044,044,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-77,hai,dev,hai:session_010,session_010,044,044,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-78,hai,dev,hai:session_010,session_010,044,044,human-ai,GPT Live,unknown
+hai__recording-80,hai,dev,hai:session_010,session_010,044,044,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-82,hai,test,hai:session_011,session_011,045;100,045,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-84,hai,test,hai:session_011,session_011,045;100,045,human-ai,cascaded,unknown
+hai__recording-85,hai,test,hai:session_011,session_011,045;100,045,human-ai,GPT Live,unknown
+hai__recording-86,hai,test,hai:session_011,session_011,045;100,045,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-88,hai,test,hai:session_012,session_012,046,046,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-89,hai,test,hai:session_012,session_012,046,046,human-ai,cascaded,unknown
+hai__recording-90,hai,test,hai:session_012,session_012,046,046,human-ai,GPT Live,unknown
+hai__recording-91,hai,test,hai:session_012,session_012,046,046,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-93,hai,test,hai:session_012,session_012,046,046,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-96,hai,test,hai:session_013,session_013,047,047,human-ai,cascaded,unknown
+hai__recording-97,hai,test,hai:session_013,session_013,047,047,human-ai,GPT Live,unknown
+hai__recording-98,hai,test,hai:session_013,session_013,047,047,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-100,hai,test,hai:session_013,session_013,047,047,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-101,hai,test,hai:session_013,session_013,047,047,human-ai,cascaded,unknown
+hai__recording-102,hai,dev,hai:session_014,session_014,048,048,human-ai,GPT Live,unknown
+hai__recording-103,hai,dev,hai:session_014,session_014,048,048,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-107,hai,dev,hai:session_014,session_014,048,048,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-108,hai,dev,hai:session_014,session_014,048,048,human-ai,cascaded,unknown
+hai__recording-109,hai,dev,hai:session_014,session_014,048,048,human-ai,GPT Live,unknown
+hai__recording-110,hai,dev,hai:session_015,session_015,051,051,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-112,hai,dev,hai:session_015,session_015,051,051,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-113,hai,dev,hai:session_015,session_015,051,051,human-ai,cascaded,unknown
+hai__recording-114,hai,dev,hai:session_015,session_015,051,051,human-ai,GPT Live,unknown
+hai__recording-115,hai,dev,hai:session_015,session_015,051,051,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-117,hai,dev,hai:session_016,session_016,052,052,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-118,hai,dev,hai:session_016,session_016,052,052,human-ai,cascaded,unknown
+hai__recording-119,hai,dev,hai:session_016,session_016,052,052,human-ai,GPT Live,unknown
+hai__recording-121,hai,dev,hai:session_016,session_016,052,052,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-124,hai,test,hai:session_017,session_017,053,053,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-125,hai,test,hai:session_017,session_017,053,053,human-ai,cascaded,unknown
+hai__recording-126,hai,test,hai:session_017,session_017,053,053,human-ai,GPT Live,unknown
+hai__recording-127,hai,test,hai:session_017,session_017,053,053,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-129,hai,test,hai:session_017,session_017,053,053,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-130,hai,dev,hai:session_018,session_018,054,054,human-ai,cascaded,unknown
+hai__recording-131,hai,dev,hai:session_018,session_018,054,054,human-ai,GPT Live,unknown
+hai__recording-132,hai,dev,hai:session_018,session_018,054,054,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-134,hai,dev,hai:session_018,session_018,054,054,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-135,hai,dev,hai:session_018,session_018,054,054,human-ai,cascaded,unknown
+hai__recording-138,hai,test,hai:session_019,session_019,057,057,human-ai,GPT Live,unknown
+hai__recording-139,hai,test,hai:session_019,session_019,057,057,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-141,hai,test,hai:session_019,session_019,057,057,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-142,hai,test,hai:session_019,session_019,057,057,human-ai,cascaded,unknown
+hai__recording-143,hai,test,hai:session_019,session_019,057,057,human-ai,GPT Live,unknown
+hai__recording-144,hai,test,hai:session_020,session_020,058,058,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-146,hai,test,hai:session_020,session_020,058,058,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-147,hai,test,hai:session_020,session_020,058,058,human-ai,cascaded,unknown
+hai__recording-148,hai,test,hai:session_020,session_020,058,058,human-ai,GPT Live,unknown
+hai__recording-149,hai,test,hai:session_020,session_020,058,058,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-151,hai,test,hai:session_021,session_021,059,059,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-153,hai,test,hai:session_021,session_021,059,059,human-ai,cascaded,unknown
+hai__recording-154,hai,test,hai:session_021,session_021,059,059,human-ai,GPT Live,unknown
+hai__recording-155,hai,test,hai:session_021,session_021,059,059,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-158,hai,dev,hai:session_022,session_022,060,060,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-160,hai,dev,hai:session_022,session_022,060,060,human-ai,cascaded,unknown
+hai__recording-161,hai,dev,hai:session_022,session_022,060,060,human-ai,GPT Live,unknown
+hai__recording-162,hai,dev,hai:session_022,session_022,060,060,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-164,hai,dev,hai:session_022,session_022,060,060,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-165,hai,test,hai:session_023,session_023,011;012,012,human-ai,cascaded,unknown
+hai__recording-166,hai,test,hai:session_023,session_023,011;012,012,human-ai,GPT Live,unknown
+hai__recording-167,hai,test,hai:session_023,session_023,011;012,012,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-169,hai,test,hai:session_023,session_023,011;012,012,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-170,hai,test,hai:session_023,session_023,011;012,012,human-ai,cascaded,unknown
+hai__recording-171,hai,test,hai:session_024,session_024,049;050,050,human-ai,GPT Live,unknown
+hai__recording-172,hai,test,hai:session_024,session_024,049;050,050,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-176,hai,test,hai:session_024,session_024,049;050,050,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-177,hai,test,hai:session_024,session_024,049;050,050,human-ai,cascaded,unknown
+hai__recording-178,hai,test,hai:session_024,session_024,049;050,050,human-ai,GPT Live,unknown
+hai__recording-179,hai,dev,hai:session_025,session_025,063,063,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-181,hai,dev,hai:session_025,session_025,063,063,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-182,hai,dev,hai:session_025,session_025,063,063,human-ai,cascaded,unknown
+hai__recording-183,hai,dev,hai:session_025,session_025,063,063,human-ai,GPT Live,unknown
+hai__recording-185,hai,dev,hai:session_025,session_025,063,063,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-188,hai,dev,hai:session_026,session_026,064,064,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-189,hai,dev,hai:session_026,session_026,064,064,human-ai,cascaded- new,unknown
+hai__recording-190,hai,dev,hai:session_026,session_026,064,064,human-ai,Moshi,unknown
+hai__recording-192,hai,dev,hai:session_026,session_026,064,064,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-194,hai,test,hai:session_027,session_027,067,067,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-195,hai,test,hai:session_027,session_027,067,067,human-ai,cascaded- new,unknown
+hai__recording-196,hai,test,hai:session_027,session_027,067,067,human-ai,moshi,unknown
+hai__recording-197,hai,test,hai:session_027,session_027,067,067,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-199,hai,test,hai:session_027,session_027,067,067,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-200,hai,dev,hai:session_028,session_028,068,068,human-ai,cascaded- new,unknown
+hai__recording-201,hai,dev,hai:session_028,session_028,068,068,human-ai,moshi,unknown
+hai__recording-202,hai,dev,hai:session_028,session_028,068,068,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-204,hai,dev,hai:session_028,session_028,068,068,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-205,hai,dev,hai:session_028,session_028,068,068,human-ai,cascaded,unknown
+hai__recording-206,hai,test,hai:session_029,session_029,069,069,human-ai,moshi,unknown
+hai__recording-207,hai,test,hai:session_029,session_029,069,069,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-209,hai,test,hai:session_029,session_029,069,069,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-210,hai,test,hai:session_029,session_029,069,069,human-ai,cascaded- new,unknown
+hai__recording-211,hai,test,hai:session_029,session_029,069,069,human-ai,moshi,unknown
+hai__recording-213,hai,test,hai:session_030,session_030,070,070,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-215,hai,test,hai:session_030,session_030,070,070,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-216,hai,test,hai:session_030,session_030,070,070,human-ai,cascaded- new,unknown
+hai__recording-217,hai,test,hai:session_030,session_030,070,070,human-ai,moshi,unknown
+hai__recording-218,hai,test,hai:session_030,session_030,070,070,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-220,hai,test,hai:session_031,session_031,071,071,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-221,hai,test,hai:session_031,session_031,071,071,human-ai,cascaded- new,unknown
+hai__recording-223,hai,test,hai:session_031,session_031,071,071,human-ai,moshi,unknown
+hai__recording-224,hai,test,hai:session_031,session_031,071,071,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-228,hai,dev,hai:session_032,session_032,072,072,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-230,hai,dev,hai:session_032,session_032,072,072,human-ai,cascaded- new,unknown
+hai__recording-233,hai,dev,hai:session_032,session_032,072,072,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-234,hai,dev,hai:session_032,session_032,072,072,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-235,hai,dev,hai:session_032,session_032,072,072,human-ai,moshi,unknown
+hai__recording-237,hai,test,hai:session_033,session_033,073,073,human-ai,cascaded- new,unknown
+hai__recording-238,hai,test,hai:session_033,session_033,073,073,human-ai,moshi,unknown
+hai__recording-239,hai,test,hai:session_033,session_033,073,073,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-241,hai,test,hai:session_033,session_033,073,073,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-242,hai,test,hai:session_033,session_033,073,073,human-ai,cascaded,unknown
+hai__recording-243,hai,dev,hai:session_034,session_034,074,074,human-ai,moshi,unknown
+hai__recording-244,hai,dev,hai:session_034,session_034,074,074,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-247,hai,dev,hai:session_034,session_034,074,074,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-252,hai,dev,hai:session_035,session_035,075,075,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-254,hai,dev,hai:session_035,session_035,075,075,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-256,hai,dev,hai:session_035,session_035,075,075,human-ai,cascaded- new,unknown
+hai__recording-257,hai,dev,hai:session_035,session_035,075,075,human-ai,moshi,unknown
+hai__recording-258,hai,dev,hai:session_035,session_035,075,075,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-261,hai,test,hai:session_036,session_036,076,076,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-262,hai,test,hai:session_036,session_036,076,076,human-ai,cascaded- new,unknown
+hai__recording-263,hai,test,hai:session_036,session_036,076,076,human-ai,moshi,unknown
+hai__recording-264,hai,test,hai:session_036,session_036,076,076,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-272,hai,test,hai:session_037,session_037,083,083,human-ai,cascaded-new,unknown
+hai__recording-273,hai,test,hai:session_037,session_037,083,083,human-ai,moshi,unknown
+hai__recording-274,hai,test,hai:session_037,session_037,083,083,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-276,hai,test,hai:session_037,session_037,083,083,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-277,hai,test,hai:session_037,session_037,083,083,human-ai,cascaded- new,unknown
+hai__recording-278,hai,dev,hai:session_038,session_038,084,084,human-ai,moshi,unknown
+hai__recording-279,hai,dev,hai:session_038,session_038,084,084,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-281,hai,dev,hai:session_038,session_038,084,084,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-282,hai,dev,hai:session_038,session_038,084,084,human-ai,cascaded-new ,unknown
+hai__recording-284,hai,dev,hai:session_038,session_038,084,084,human-ai,moshi,unknown
+hai__recording-285,hai,test,hai:session_039,session_039,085,085,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-288,hai,test,hai:session_039,session_039,085,085,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-289,hai,test,hai:session_039,session_039,085,085,human-ai,cascaded- new,unknown
+hai__recording-290,hai,test,hai:session_039,session_039,085,085,human-ai,moshi,unknown
+hai__recording-291,hai,test,hai:session_039,session_039,085,085,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-293,hai,test,hai:session_040,session_040,086,086,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-294,hai,test,hai:session_040,session_040,086,086,human-ai,cascaded- new,unknown
+hai__recording-295,hai,test,hai:session_040,session_040,086,086,human-ai,moshi,unknown
+hai__recording-296,hai,test,hai:session_040,session_040,086,086,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-299,hai,test,hai:session_041,session_041,093,093,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-301,hai,test,hai:session_041,session_041,093,093,human-ai,cascaded- new,unknown
+hai__recording-302,hai,test,hai:session_041,session_041,093,093,human-ai,moshi,unknown
+hai__recording-303,hai,test,hai:session_041,session_041,093,093,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-306,hai,test,hai:session_041,session_041,093,093,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-310,hai,test,hai:session_042,session_042,094,094,human-ai,cascaded-new,unknown
+hai__recording-311,hai,test,hai:session_042,session_042,094,094,human-ai,moshi,unknown
+hai__recording-312,hai,test,hai:session_042,session_042,094,094,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-314,hai,test,hai:session_042,session_042,094,094,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-315,hai,test,hai:session_042,session_042,094,094,human-ai,cascaded,unknown
+hai__recording-317,hai,test,hai:session_043,session_043,096,096,human-ai,moshi,unknown
+hai__recording-319,hai,test,hai:session_043,session_043,096,096,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-321,hai,test,hai:session_043,session_043,096,096,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-322,hai,test,hai:session_043,session_043,096,096,human-ai,cascaded- new,unknown
+hai__recording-324,hai,test,hai:session_043,session_043,096,096,human-ai,moshi,unknown
+hai__recording-325,hai,dev,hai:session_044,session_044,097,097,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hai__recording-327,hai,dev,hai:session_044,session_044,097,097,human-ai,Qwen3.5-Omni-Plus,unknown
+hai__recording-328,hai,dev,hai:session_044,session_044,097,097,human-ai,cascaded,unknown
+hai__recording-329,hai,dev,hai:session_044,session_044,097,097,human-ai,GPT Live,unknown
+hai__recording-330,hai,dev,hai:session_044,session_044,097,097,human-ai,Gemini 3.1 Flash Live Preview,unknown
+hh_emotion__recording-2,hh_emotion,dev,hh_emotion:session_024,session_024,113;114,113;114,natural,human-human,stranger_or_unknown
+hh_emotion__recording-3,hh_emotion,dev,hh_emotion:session_024,session_024,113;114,113;114,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-5,hh_emotion,dev,hh_emotion:session_024,session_024,113;114,113;114,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-6,hh_emotion,dev,hh_emotion:session_024,session_024,113;114,113;114,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-7,hh_emotion,test,hh_emotion:session_025,session_025,115;116,115;116,natural,human-human,stranger_or_unknown
+hh_emotion__recording-8,hh_emotion,test,hh_emotion:session_025,session_025,115;116,115;116,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-9,hh_emotion,test,hh_emotion:session_025,session_025,115;116,115;116,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-10,hh_emotion,test,hh_emotion:session_025,session_025,115;116,115;116,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-118,hh_emotion,test,hh_emotion:session_001,session_001,036;037,036;037,natural,human-human,classmate_or_colleague
+hh_emotion__recording-119,hh_emotion,test,hh_emotion:session_001,session_001,036;037,036;037,affective_mismatch,human-human,classmate_or_colleague
+hh_emotion__recording-120,hh_emotion,test,hh_emotion:session_001,session_001,036;037,036;037,affective_mismatch,human-human,classmate_or_colleague
+hh_emotion__recording-121,hh_emotion,test,hh_emotion:session_001,session_001,036;037,036;037,affective_mismatch,human-human,classmate_or_colleague
+hh_emotion__recording-130,hh_emotion,dev,hh_emotion:session_002,session_002,038;039,038;039,natural,human-human,romantic_partner_or_spouse
+hh_emotion__recording-131,hh_emotion,dev,hh_emotion:session_002,session_002,038;039,038;039,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-133,hh_emotion,dev,hh_emotion:session_002,session_002,038;039,038;039,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-134,hh_emotion,dev,hh_emotion:session_002,session_002,038;039,038;039,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-136,hh_emotion,test,hh_emotion:session_003,session_003,034;035,034;035,natural,human-human,friend
+hh_emotion__recording-137,hh_emotion,test,hh_emotion:session_003,session_003,034;035,034;035,affective_mismatch,human-human,friend
+hh_emotion__recording-139,hh_emotion,test,hh_emotion:session_003,session_003,034;035,034;035,affective_mismatch,human-human,friend
+hh_emotion__recording-141,hh_emotion,test,hh_emotion:session_003,session_003,034;035,034;035,affective_mismatch,human-human,friend
+hh_emotion__recording-149,hh_emotion,dev,hh_emotion:session_004,session_004,040;041,040;041,natural,human-human,friend
+hh_emotion__recording-150,hh_emotion,dev,hh_emotion:session_004,session_004,040;041,040;041,affective_mismatch,human-human,friend
+hh_emotion__recording-151,hh_emotion,dev,hh_emotion:session_004,session_004,040;041,040;041,affective_mismatch,human-human,friend
+hh_emotion__recording-152,hh_emotion,dev,hh_emotion:session_004,session_004,040;041,040;041,affective_mismatch,human-human,friend
+hh_emotion__recording-153,hh_emotion,test,hh_emotion:session_005,session_005,005;006,005;006,natural,human-human,friend
+hh_emotion__recording-155,hh_emotion,test,hh_emotion:session_005,session_005,005;006,005;006,affective_mismatch,human-human,friend
+hh_emotion__recording-157,hh_emotion,test,hh_emotion:session_005,session_005,005;006,005;006,affective_mismatch,human-human,friend
+hh_emotion__recording-158,hh_emotion,test,hh_emotion:session_005,session_005,005;006,005;006,affective_mismatch,human-human,friend
+hh_emotion__recording-165,hh_emotion,test,hh_emotion:session_006,session_006,049;050,049;050,natural,human-human,romantic_partner_or_spouse
+hh_emotion__recording-166,hh_emotion,test,hh_emotion:session_006,session_006,049;050,049;050,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-167,hh_emotion,test,hh_emotion:session_006,session_006,049;050,049;050,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-168,hh_emotion,test,hh_emotion:session_006,session_006,049;050,049;050,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-169,hh_emotion,dev,hh_emotion:session_007,session_007,023;024,023;024,natural,human-human,friend
+hh_emotion__recording-170,hh_emotion,dev,hh_emotion:session_007,session_007,023;024,023;024,affective_mismatch,human-human,friend
+hh_emotion__recording-171,hh_emotion,dev,hh_emotion:session_007,session_007,023;024,023;024,affective_mismatch,human-human,friend
+hh_emotion__recording-174,hh_emotion,dev,hh_emotion:session_007,session_007,023;024,023;024,affective_mismatch,human-human,friend
+hh_emotion__recording-188,hh_emotion,test,hh_emotion:session_008,session_008,061;062,061;062,natural,human-human,family_member
+hh_emotion__recording-190,hh_emotion,test,hh_emotion:session_008,session_008,061;062,061;062,affective_mismatch,human-human,family_member
+hh_emotion__recording-191,hh_emotion,test,hh_emotion:session_008,session_008,061;062,061;062,affective_mismatch,human-human,family_member
+hh_emotion__recording-192,hh_emotion,test,hh_emotion:session_008,session_008,061;062,061;062,affective_mismatch,human-human,family_member
+hh_emotion__recording-206,hh_emotion,test,hh_emotion:session_009,session_009,013;014,013;014,natural,human-human,family_member
+hh_emotion__recording-209,hh_emotion,test,hh_emotion:session_009,session_009,013;014,013;014,affective_mismatch,human-human,family_member
+hh_emotion__recording-210,hh_emotion,test,hh_emotion:session_009,session_009,013;014,013;014,affective_mismatch,human-human,family_member
+hh_emotion__recording-211,hh_emotion,test,hh_emotion:session_009,session_009,013;014,013;014,affective_mismatch,human-human,family_member
+hh_emotion__recording-221,hh_emotion,test,hh_emotion:session_010,session_010,055;056,055;056,natural,human-human,romantic_partner_or_spouse
+hh_emotion__recording-222,hh_emotion,test,hh_emotion:session_010,session_010,055;056,055;056,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-223,hh_emotion,test,hh_emotion:session_010,session_010,055;056,055;056,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-224,hh_emotion,test,hh_emotion:session_010,session_010,055;056,055;056,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-242,hh_emotion,test,hh_emotion:session_011,session_011,079;080,079;080,natural,human-human,stranger_or_unknown
+hh_emotion__recording-243,hh_emotion,test,hh_emotion:session_011,session_011,079;080,079;080,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-244,hh_emotion,test,hh_emotion:session_011,session_011,079;080,079;080,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-245,hh_emotion,test,hh_emotion:session_011,session_011,079;080,079;080,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-255,hh_emotion,test,hh_emotion:session_012,session_012,045;100,045;100,natural,human-human,stranger_or_unknown
+hh_emotion__recording-256,hh_emotion,test,hh_emotion:session_012,session_012,045;100,045;100,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-259,hh_emotion,test,hh_emotion:session_012,session_012,045;100,045;100,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-260,hh_emotion,test,hh_emotion:session_012,session_012,045;100,045;100,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-261,hh_emotion,dev,hh_emotion:session_013,session_013,103;104,103;104,natural,human-human,stranger_or_unknown
+hh_emotion__recording-262,hh_emotion,dev,hh_emotion:session_013,session_013,103;104,103;104,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-263,hh_emotion,dev,hh_emotion:session_013,session_013,103;104,103;104,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-264,hh_emotion,dev,hh_emotion:session_013,session_013,103;104,103;104,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-271,hh_emotion,dev,hh_emotion:session_014,session_014,087;088,087;088,natural,human-human,stranger_or_unknown
+hh_emotion__recording-272,hh_emotion,dev,hh_emotion:session_014,session_014,087;088,087;088,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-273,hh_emotion,dev,hh_emotion:session_014,session_014,087;088,087;088,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-275,hh_emotion,dev,hh_emotion:session_014,session_014,087;088,087;088,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-285,hh_emotion,test,hh_emotion:session_015,session_015,089;090,089;090,natural,human-human,stranger_or_unknown
+hh_emotion__recording-286,hh_emotion,test,hh_emotion:session_015,session_015,089;090,089;090,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-287,hh_emotion,test,hh_emotion:session_015,session_015,089;090,089;090,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-288,hh_emotion,test,hh_emotion:session_015,session_015,089;090,089;090,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-297,hh_emotion,test,hh_emotion:session_016,session_016,091;092,091;092,natural,human-human,stranger_or_unknown
+hh_emotion__recording-299,hh_emotion,test,hh_emotion:session_016,session_016,091;092,091;092,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-301,hh_emotion,test,hh_emotion:session_016,session_016,091;092,091;092,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-302,hh_emotion,test,hh_emotion:session_016,session_016,091;092,091;092,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-309,hh_emotion,test,hh_emotion:session_017,session_017,026;095,026;095,natural,human-human,stranger_or_unknown
+hh_emotion__recording-310,hh_emotion,test,hh_emotion:session_017,session_017,026;095,026;095,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-311,hh_emotion,test,hh_emotion:session_017,session_017,026;095,026;095,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-312,hh_emotion,test,hh_emotion:session_017,session_017,026;095,026;095,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-319,hh_emotion,dev,hh_emotion:session_018,session_018,098;099,098;099,natural,human-human,stranger_or_unknown
+hh_emotion__recording-320,hh_emotion,dev,hh_emotion:session_018,session_018,098;099,098;099,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-322,hh_emotion,dev,hh_emotion:session_018,session_018,098;099,098;099,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-323,hh_emotion,dev,hh_emotion:session_018,session_018,098;099,098;099,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-324,hh_emotion,test,hh_emotion:session_019,session_019,101;102,101;102,natural,human-human,stranger_or_unknown
+hh_emotion__recording-326,hh_emotion,test,hh_emotion:session_019,session_019,101;102,101;102,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-328,hh_emotion,test,hh_emotion:session_019,session_019,101;102,101;102,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-329,hh_emotion,test,hh_emotion:session_019,session_019,101;102,101;102,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-338,hh_emotion,test,hh_emotion:session_020,session_020,105;106,105;106,natural,human-human,stranger_or_unknown
+hh_emotion__recording-339,hh_emotion,test,hh_emotion:session_020,session_020,105;106,105;106,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-341,hh_emotion,test,hh_emotion:session_020,session_020,105;106,105;106,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-342,hh_emotion,test,hh_emotion:session_020,session_020,105;106,105;106,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-350,hh_emotion,test,hh_emotion:session_021,session_021,109;110,109;110,natural,human-human,stranger_or_unknown
+hh_emotion__recording-352,hh_emotion,test,hh_emotion:session_021,session_021,109;110,109;110,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-353,hh_emotion,test,hh_emotion:session_021,session_021,109;110,109;110,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-354,hh_emotion,test,hh_emotion:session_021,session_021,109;110,109;110,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-355,hh_emotion,dev,hh_emotion:session_022,session_022,111;112,111;112,natural,human-human,romantic_partner_or_spouse
+hh_emotion__recording-356,hh_emotion,dev,hh_emotion:session_022,session_022,111;112,111;112,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-357,hh_emotion,dev,hh_emotion:session_022,session_022,111;112,111;112,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-358,hh_emotion,dev,hh_emotion:session_022,session_022,111;112,111;112,affective_mismatch,human-human,romantic_partner_or_spouse
+hh_emotion__recording-359,hh_emotion,test,hh_emotion:session_023,session_023,107;108,107;108,natural,human-human,stranger_or_unknown
+hh_emotion__recording-360,hh_emotion,test,hh_emotion:session_023,session_023,107;108,107;108,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-361,hh_emotion,test,hh_emotion:session_023,session_023,107;108,107;108,affective_mismatch,human-human,stranger_or_unknown
+hh_emotion__recording-362,hh_emotion,test,hh_emotion:session_023,session_023,107;108,107;108,affective_mismatch,human-human,stranger_or_unknown
+hh_turn__recording-1,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,natural,human-human,friend
+hh_turn__recording-2,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,unnatural,human-human,friend
+hh_turn__recording-4,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,unnatural,human-human,friend
+hh_turn__recording-5,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,unnatural,human-human,friend
+hh_turn__recording-6,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,unnatural,human-human,friend
+hh_turn__recording-7,hh_turn,dev,hh_turn:session_000,session_000,001;002,001;002,unnatural,human-human,friend
+hh_turn__recording-8,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,natural,human-human,family_member
+hh_turn__recording-9,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,unnatural,human-human,family_member
+hh_turn__recording-10,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,unnatural,human-human,family_member
+hh_turn__recording-12,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,unnatural,human-human,family_member
+hh_turn__recording-13,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,unnatural,human-human,family_member
+hh_turn__recording-14,hh_turn,dev,hh_turn:session_001,session_001,003;004,003;004,unnatural,human-human,family_member
+hh_turn__recording-19,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,natural,human-human,friend
+hh_turn__recording-20,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,unnatural,human-human,friend
+hh_turn__recording-21,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,unnatural,human-human,friend
+hh_turn__recording-22,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,unnatural,human-human,friend
+hh_turn__recording-23,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,unnatural,human-human,friend
+hh_turn__recording-24,hh_turn,test,hh_turn:session_002,session_002,005;006,005;006,unnatural,human-human,friend
+hh_turn__recording-29,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,natural,human-human,family_member
+hh_turn__recording-30,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,unnatural,human-human,family_member
+hh_turn__recording-31,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,unnatural,human-human,family_member
+hh_turn__recording-32,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,unnatural,human-human,family_member
+hh_turn__recording-33,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,unnatural,human-human,family_member
+hh_turn__recording-34,hh_turn,dev,hh_turn:session_003,session_003,007;008,007;008,unnatural,human-human,family_member
+hh_turn__recording-35,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,natural,human-human,friend
+hh_turn__recording-36,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,unnatural,human-human,friend
+hh_turn__recording-37,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,unnatural,human-human,friend
+hh_turn__recording-39,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,unnatural,human-human,friend
+hh_turn__recording-40,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,unnatural,human-human,friend
+hh_turn__recording-41,hh_turn,dev,hh_turn:session_004,session_004,009;010,009;010,unnatural,human-human,friend
+hh_turn__recording-42,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,natural,human-human,friend
+hh_turn__recording-43,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,unnatural,human-human,friend
+hh_turn__recording-44,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,unnatural,human-human,friend
+hh_turn__recording-46,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,unnatural,human-human,friend
+hh_turn__recording-47,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,unnatural,human-human,friend
+hh_turn__recording-48,hh_turn,test,hh_turn:session_005,session_005,011;012,011;012,unnatural,human-human,friend
+hh_turn__recording-49,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,natural,human-human,family_member
+hh_turn__recording-51,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,unnatural,human-human,family_member
+hh_turn__recording-52,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,unnatural,human-human,family_member
+hh_turn__recording-53,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,unnatural,human-human,family_member
+hh_turn__recording-55,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,unnatural,human-human,family_member
+hh_turn__recording-56,hh_turn,test,hh_turn:session_006,session_006,013;014,013;014,unnatural,human-human,family_member
+hh_turn__recording-57,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,natural,human-human,roomate_or_housemate
+hh_turn__recording-58,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,unnatural,human-human,roomate_or_housemate
+hh_turn__recording-59,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,unnatural,human-human,roomate_or_housemate
+hh_turn__recording-60,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,unnatural,human-human,roomate_or_housemate
+hh_turn__recording-62,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,unnatural,human-human,roomate_or_housemate
+hh_turn__recording-63,hh_turn,dev,hh_turn:session_007,session_007,015;016,015;016,unnatural,human-human,roomate_or_housemate
+hh_turn__recording-64,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-65,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-66,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-67,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-68,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-69,hh_turn,test,hh_turn:session_008,session_008,017;018,017;018,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-72,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-73,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-74,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-75,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-76,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-78,hh_turn,test,hh_turn:session_009,session_009,019;020,019;020,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-79,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,natural,human-human,family_member
+hh_turn__recording-80,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,unnatural,human-human,family_member
+hh_turn__recording-81,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,unnatural,human-human,family_member
+hh_turn__recording-82,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,unnatural,human-human,family_member
+hh_turn__recording-83,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,unnatural,human-human,family_member
+hh_turn__recording-84,hh_turn,test,hh_turn:session_010,session_010,021;022,021;022,unnatural,human-human,family_member
+hh_turn__recording-86,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,natural,human-human,friend
+hh_turn__recording-88,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,unnatural,human-human,friend
+hh_turn__recording-89,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,unnatural,human-human,friend
+hh_turn__recording-90,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,unnatural,human-human,friend
+hh_turn__recording-91,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,unnatural,human-human,friend
+hh_turn__recording-92,hh_turn,dev,hh_turn:session_011,session_011,023;024,023;024,unnatural,human-human,friend
+hh_turn__recording-93,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-95,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-96,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-99,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-100,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-101,hh_turn,test,hh_turn:session_012,session_012,030;031,030;031,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-104,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,natural,human-human,friend
+hh_turn__recording-105,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,unnatural,human-human,friend
+hh_turn__recording-106,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,unnatural,human-human,friend
+hh_turn__recording-107,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,unnatural,human-human,friend
+hh_turn__recording-108,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,unnatural,human-human,friend
+hh_turn__recording-109,hh_turn,test,hh_turn:session_013,session_013,034;035,034;035,unnatural,human-human,friend
+hh_turn__recording-111,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,natural,human-human,classmate_or_colleague
+hh_turn__recording-112,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,unnatural,human-human,classmate_or_colleague
+hh_turn__recording-113,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,unnatural,human-human,classmate_or_colleague
+hh_turn__recording-114,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,unnatural,human-human,classmate_or_colleague
+hh_turn__recording-116,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,unnatural,human-human,classmate_or_colleague
+hh_turn__recording-117,hh_turn,test,hh_turn:session_014,session_014,036;037,036;037,unnatural,human-human,classmate_or_colleague
+hh_turn__recording-122,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-124,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-125,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-126,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-128,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-129,hh_turn,dev,hh_turn:session_015,session_015,038;039,038;039,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-142,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,natural,human-human,friend
+hh_turn__recording-144,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,unnatural,human-human,friend
+hh_turn__recording-145,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,unnatural,human-human,friend
+hh_turn__recording-146,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,unnatural,human-human,friend
+hh_turn__recording-147,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,unnatural,human-human,friend
+hh_turn__recording-148,hh_turn,dev,hh_turn:session_016,session_016,040;041,040;041,unnatural,human-human,friend
+hh_turn__recording-159,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-160,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-161,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-162,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-163,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-164,hh_turn,test,hh_turn:session_017,session_017,049;050,049;050,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-175,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,natural,human-human,romantic_partner_or_spouse
+hh_turn__recording-176,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-177,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-178,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-180,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-181,hh_turn,test,hh_turn:session_018,session_018,055;056,055;056,unnatural,human-human,romantic_partner_or_spouse
+hh_turn__recording-182,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,natural,human-human,family_member
+hh_turn__recording-183,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,unnatural,human-human,family_member
+hh_turn__recording-184,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,unnatural,human-human,family_member
+hh_turn__recording-185,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,unnatural,human-human,family_member
+hh_turn__recording-186,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,unnatural,human-human,family_member
+hh_turn__recording-187,hh_turn,test,hh_turn:session_019,session_019,061;062,061;062,unnatural,human-human,family_member
+hh_turn__recording-212,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,natural,human-human,family_member
+hh_turn__recording-214,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,unnatural,human-human,family_member
+hh_turn__recording-216,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,unnatural,human-human,family_member
+hh_turn__recording-217,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,unnatural,human-human,family_member
+hh_turn__recording-219,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,unnatural,human-human,family_member
+hh_turn__recording-220,hh_turn,test,hh_turn:session_020,session_020,065;066,065;066,unnatural,human-human,family_member
+hh_turn__recording-233,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,natural,human-human,stranger_or_unknown
+hh_turn__recording-234,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-235,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-236,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-237,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-240,hh_turn,test,hh_turn:session_022,session_022,079;080,079;080,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-248,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,natural,human-human,stranger_or_unknown
+hh_turn__recording-250,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-251,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-252,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-253,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-254,hh_turn,test,hh_turn:session_023,session_023,045;100,045;100,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-265,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,natural,human-human,stranger_or_unknown
+hh_turn__recording-266,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-267,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-268,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-269,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-270,hh_turn,dev,hh_turn:session_024,session_024,087;088,087;088,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-277,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,natural,human-human,stranger_or_unknown
+hh_turn__recording-279,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-281,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-282,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-283,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-284,hh_turn,test,hh_turn:session_025,session_025,089;090,089;090,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-289,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,natural,human-human,stranger_or_unknown
+hh_turn__recording-291,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-292,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-293,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-294,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-295,hh_turn,test,hh_turn:session_026,session_026,091;092,091;092,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-303,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,natural,human-human,stranger_or_unknown
+hh_turn__recording-304,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-305,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-306,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-307,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-308,hh_turn,test,hh_turn:session_027,session_027,026;095,026;095,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-313,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,natural,human-human,stranger_or_unknown
+hh_turn__recording-314,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-315,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-316,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-317,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-318,hh_turn,dev,hh_turn:session_028,session_028,098;099,098;099,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-331,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,natural,human-human,stranger_or_unknown
+hh_turn__recording-332,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-333,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-335,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-336,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-337,hh_turn,test,hh_turn:session_029,session_029,105;106,105;106,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-343,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,natural,human-human,stranger_or_unknown
+hh_turn__recording-344,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-345,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-346,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-347,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,unnatural,human-human,stranger_or_unknown
+hh_turn__recording-348,hh_turn,test,hh_turn:session_030,session_030,107;108,107;108,unnatural,human-human,stranger_or_unknown

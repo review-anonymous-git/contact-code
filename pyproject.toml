@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contact-eval"
+version = "0.1.0"
+description = "CONTACT conversational naturalness scoring and evaluation"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "pandas>=2,<3", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+objectives = ["torch>=2.6,<2.7"]
+inference = ["torch==2.6.0", "transformers==4.57.6"]
+audio = ["torch==2.6.0", "torchaudio==2.6.0", "transformers==4.57.6",
+         "soundfile==0.13.1", "silero-vad==6.2.1", "huggingface-hub==0.36.1", "loralib==0.1.2"]
+
+[project.scripts]
+contact-evaluate = "contact.evaluate:main"
+contact-prepare = "contact.prepare:main"
+contact-infer = "contact.infer:main"
+contact-dataset = "contact.dataset:main"
+contact-merge = "contact.merge:main"
+
+[tool.setuptools.packages.find]
+include = ["contact*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

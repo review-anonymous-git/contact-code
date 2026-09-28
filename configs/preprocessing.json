@@ -1,0 +1,38 @@
+{
+  "mimi": {
+    "model_id": "kyutai/mimi",
+    "revision": "89091b3e466eb6a9d11e537bf26b144f194978f7",
+    "sample_rate": 24000,
+    "block_seconds": 300,
+    "feature_chain": "encoder -> encoder_transformer -> downsample",
+    "stored_dtype": "float16"
+  },
+  "affect_teacher": {
+    "model_id": "tiantiaf/whisper-large-v3-msp-podcast-emotion-dim",
+    "revision": "09fe2573a1e636bad9333c408d9bd523f888145a",
+    "wrapper_repository": "https://github.com/tiantiaf0627/vox-profile-release.git",
+    "wrapper_revision": "85100e60844a3f324a139e24fb9225aa6d8e45d1",
+    "sample_rate": 16000,
+    "crop_before_resampling": true,
+    "amplitude_normalization": false
+  },
+  "vad": {
+    "package": "silero-vad==6.2.1",
+    "sample_rate": 16000,
+    "threshold": 0.5,
+    "min_speech_duration_ms": 100,
+    "min_silence_duration_ms": 50,
+    "cleanup_min_speech_ms": 150,
+    "cleanup_min_silence_ms": 150,
+    "stored_hz": 50
+  },
+  "responses": {
+    "ipu_gap_seconds": 0.2,
+    "merge_gap_seconds": 0.2,
+    "max_span_seconds": 8,
+    "window_seconds": 3,
+    "hop_seconds": 1,
+    "minimum_true_seconds": 1.5,
+    "minimum_voiced_ratio": 0.6
+  }
+}
