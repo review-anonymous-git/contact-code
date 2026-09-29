@@ -52,7 +52,7 @@ python -m contact.evaluate --data data --output outputs/bootstrap \
 
 Bootstrap outputs contain paired differences, 95% confidence intervals and
 unadjusted two-sided p-values. Comparisons use the strongest observed baseline
-at each endpoint on the retrospective evaluation split.
+at each endpoint on the evaluation split.
 
 ## Score audio
 
