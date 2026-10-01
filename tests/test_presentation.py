@@ -24,6 +24,8 @@ def test_supplied_table_roundtrip_and_significance():
     html = render_document(panels)
     assert html == (ROOT / 'docs/results.html').read_text()
     assert 'instructed' in html and 'NaN' not in html
+    assert 'Competitive Floor Conflict' in html
+    assert '10 dev / 20 test' in html
     assert html.count('<td>') == 626
     assert html.count('<table ') == html.count('</table>') == 2
     for p in panels:

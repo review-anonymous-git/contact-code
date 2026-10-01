@@ -19,7 +19,7 @@ def test_individual_ratings_and_role_mapping():
         np.testing.assert_allclose(rows[dim + '_participant'],
                                    (rows.participant_1_score + rows.participant_2_score) / 2)
     matched = hh.loc[hh.participant_role_status.eq('unilateral_matched')]
-    assert len(matched) == 181
+    assert len(matched) == 187
     for n in (1, 2):
         other = 3 - n
         rows = matched.loc[matched[f'participant_{n}_role'].eq('uninstructed')]
@@ -37,17 +37,19 @@ def test_natural_bilateral_unresolved_and_hai():
     assert natural.instructed_participant_score.isna().all()
     bilateral = f.loc[f.participant_role_status.eq('bilateral')]
     assert len(bilateral) == 30
+    assert bilateral.groupby(['corpus', 'split']).size().to_dict() == {
+        ('hh_turn', 'dev'): 10, ('hh_turn', 'test'): 20}
     assert bilateral.participant_1_role.eq('instructed').all()
     assert bilateral.participant_2_role.eq('instructed').all()
     assert bilateral.uninstructed_participant_score.isna().all()
     assert bilateral.uninstructed_mos_eligible.eq(False).all()
     equal = f.loc[f.participant_role_status.eq('equal_scores_role_unresolved')]
-    assert len(equal) == 7
+    assert len(equal) == 5
     assert equal.participant_1_role.eq('unresolved').all()
     assert equal.participant_2_role.eq('unresolved').all()
     np.testing.assert_allclose(equal.instructed_participant_score, equal.uninstructed_participant_score)
     missing = f.loc[f.participant_role_status.eq('unresolved')]
-    assert len(missing) == 7
+    assert len(missing) == 3
     assert missing.instructed_participant_score.isna().all()
     assert missing.uninstructed_participant_score.isna().all()
     hai = f.loc[f.corpus.eq('hai')]
@@ -61,9 +63,9 @@ def test_uninstructed_table_targets():
     f, _ = load_inputs(DATA)
     eligible = f.loc[f.uninstructed_mos_eligible.eq(True)]
     assert eligible.groupby(['corpus', 'split']).size().to_dict() == {
-        ('hh_turn', 'dev'): 44, ('hh_turn', 'test'): 96,
+        ('hh_turn', 'dev'): 44, ('hh_turn', 'test'): 100,
         ('hh_emotion', 'dev'): 32, ('hh_emotion', 'test'): 68}
-    for corpus, dim, col, expected in [('hh_turn', 'timing', 'T', .482502),
+    for corpus, dim, col, expected in [('hh_turn', 'timing', 'T', .481918),
                                      ('hh_emotion', 'affect', 'E', .282053)]:
         rows = eligible.loc[eligible.corpus.eq(corpus)]
         np.testing.assert_allclose(rows.uninstructed_combined,
@@ -73,3 +75,19 @@ def test_uninstructed_table_targets():
     raw = (DATA / 'ratings.csv').read_text()
     import re
     assert re.search(r'\b[0-9a-f]{23,24}\b', raw) is None
+
+
+@pytest.mark.parametrize('recording,uninstructed_slot,uninstructed,instructed,combined', [
+    (21, 1, 2, 4, 2), (22, 1, 4, 5, 3.5), (23, 2, 4, 2, 3),
+    (24, 2, 5, 5, 4), (214, 2, 5, 4, 3.5), (219, 2, 5, 5, 4),
+])
+def test_confirmed_questionnaire_roles(recording, uninstructed_slot, uninstructed, instructed, combined):
+    f, _ = load_inputs(DATA)
+    row = f.set_index('recording_id').loc[f'hh_turn__recording-{recording}']
+    assert row[f'participant_{uninstructed_slot}_role'] == 'uninstructed'
+    assert row[f'participant_{3 - uninstructed_slot}_role'] == 'instructed'
+    assert row.uninstructed_participant_score == uninstructed
+    assert row.instructed_participant_score == instructed
+    assert row.uninstructed_combined == combined
+    assert row.participant_role_status == 'unilateral_matched'
+    assert row.uninstructed_mos_eligible

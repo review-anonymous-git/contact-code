@@ -207,8 +207,10 @@ For H–H recordings, the file also includes:
 
 Participant numbers refer to questionnaire response order, not audio channels.
 In natural conditions both participants are uninstructed, so their role-level
-score is their mean. In bilateral manipulations both are instructed and no
-uninstructed score exists. Equal questionnaire ratings can determine both
+score is their mean. In Competitive Floor Conflict both participants receive
+instructions, so no uninstructed score exists. This condition is excluded only
+from the uninstructed-participant MOS analysis (10 dev and 20 test recordings);
+the main results and discrimination metrics retain it. Equal questionnaire ratings can determine both
 role-level scores even when the individual roles remain unresolved. Missing
 role scores stay empty. These columns do not replace the existing P/S/C labels;
 H–AI retains its dimension-specific ratings. Model predictions remain in
@@ -255,10 +257,10 @@ The table below includes the uninstructed-participant analysis. [LaTeX source](d
 <tr><th scope="row">w/o future joint silence</th><td>80.0</td><td>.78</td><td>84.0</td><td>.77</td><td>62.5</td><td>.62</td><td>60.8</td><td>.64</td><td><strong>.28</strong></td><td>.28</td><td>.31</td><td>.20</td><td>.19<sup>‡</sup></td><td>.22</td><td>.13</td><td>.12</td><td>.15</td><td>.07</td><td>.17</td><td>.12</td></tr>
 <tr><th scope="row">w/o future voice activity</th><td>60.0</td><td>.58</td><td>71.0<sup>‡</sup></td><td>.69<sup>‡</sup></td><td><strong>83.3</strong></td><td><strong>.77</strong></td><td><strong>82.4</strong></td><td><strong>.72</strong></td><td>.26</td><td>.32</td><td>.31</td><td>.33</td><td>.31</td><td>.34</td><td><strong>.39</strong></td><td><strong>.33</strong></td><td><strong>.40</strong></td><td><strong>.26</strong></td><td><strong>.29</strong></td><td><strong>.28</strong></td></tr>
 <tr class="group"><th colspan="21">Uninstructed-participant sensitivity</th></tr>
-<tr><th scope="row">Ours</th><td>78.0</td><td>.72</td><td><strong>86.0</strong></td><td><strong>.80</strong></td><td><strong>83.3</strong></td><td><strong>.77</strong></td><td><strong>82.4</strong><sup>†</sup></td><td><strong>.72</strong></td><td>.43</td><td>.54</td><td>.53</td><td><strong>.44</strong><sup>†</sup></td><td>.46<sup>†</sup></td><td>.48<sup>†</sup></td><td><strong>.23</strong></td><td><strong>.33</strong></td><td><strong>.35</strong></td><td><strong>.23</strong></td><td><strong>.29</strong></td><td><strong>.28</strong></td></tr>
-<tr><th scope="row">w/o A–V</th><td>78.0</td><td>.72</td><td><strong>86.0</strong></td><td><strong>.80</strong></td><td><strong>83.3</strong></td><td>.75</td><td>74.5</td><td>.71</td><td>.43</td><td>.54</td><td>.53</td><td><strong>.44</strong></td><td>.46</td><td>.48</td><td>.21</td><td>.31</td><td>.31</td><td>.20</td><td><strong>.29</strong></td><td>.26</td></tr>
-<tr><th scope="row">w/o future joint silence</th><td><strong>80.0</strong></td><td><strong>.78</strong></td><td>84.0</td><td>.77</td><td>62.5</td><td>.62</td><td>60.8</td><td>.64</td><td>.30</td><td>.35</td><td>.36</td><td>.29<sup>‡</sup></td><td>.25<sup>‡</sup></td><td>.29<sup>‡</sup></td><td>.22</td><td>.12</td><td>.23</td><td>.10</td><td>.17</td><td>.17</td></tr>
-<tr><th scope="row">w/o future voice activity</th><td>60.0</td><td>.58</td><td>71.0<sup>‡</sup></td><td>.69<sup>‡</sup></td><td><strong>83.3</strong></td><td><strong>.77</strong></td><td><strong>82.4</strong></td><td><strong>.72</strong></td><td><strong>.44</strong></td><td><strong>.58</strong></td><td><strong>.55</strong></td><td>.43</td><td><strong>.49</strong></td><td><strong>.50</strong></td><td><strong>.23</strong></td><td><strong>.33</strong></td><td><strong>.35</strong></td><td><strong>.23</strong></td><td><strong>.29</strong></td><td><strong>.28</strong></td></tr>
+<tr><th scope="row">Ours</th><td>78.0</td><td>.72</td><td><strong>86.0</strong></td><td><strong>.80</strong></td><td><strong>83.3</strong></td><td><strong>.77</strong></td><td><strong>82.4</strong><sup>†</sup></td><td><strong>.72</strong></td><td>.43</td><td>.54</td><td>.53</td><td><strong>.44</strong><sup>†</sup></td><td>.44<sup>†</sup></td><td><strong>.48</strong><sup>†</sup></td><td><strong>.23</strong></td><td><strong>.33</strong></td><td><strong>.35</strong></td><td><strong>.23</strong></td><td><strong>.29</strong></td><td><strong>.28</strong></td></tr>
+<tr><th scope="row">w/o A–V</th><td>78.0</td><td>.72</td><td><strong>86.0</strong></td><td><strong>.80</strong></td><td><strong>83.3</strong></td><td>.75</td><td>74.5</td><td>.71</td><td>.43</td><td>.54</td><td>.53</td><td><strong>.44</strong></td><td>.44</td><td><strong>.48</strong></td><td>.21</td><td>.31</td><td>.31</td><td>.20</td><td><strong>.29</strong></td><td>.26</td></tr>
+<tr><th scope="row">w/o future joint silence</th><td><strong>80.0</strong></td><td><strong>.78</strong></td><td>84.0</td><td>.77</td><td>62.5</td><td>.62</td><td>60.8</td><td>.64</td><td>.30</td><td>.35</td><td>.36</td><td>.29</td><td>.25<sup>‡</sup></td><td>.30<sup>‡</sup></td><td>.22</td><td>.12</td><td>.23</td><td>.10</td><td>.17</td><td>.17</td></tr>
+<tr><th scope="row">w/o future voice activity</th><td>60.0</td><td>.58</td><td>71.0<sup>‡</sup></td><td>.69<sup>‡</sup></td><td><strong>83.3</strong></td><td><strong>.77</strong></td><td><strong>82.4</strong></td><td><strong>.72</strong></td><td><strong>.44</strong></td><td><strong>.58</strong></td><td><strong>.55</strong></td><td>.42</td><td><strong>.47</strong></td><td><strong>.48</strong></td><td><strong>.23</strong></td><td><strong>.33</strong></td><td><strong>.35</strong></td><td><strong>.23</strong></td><td><strong>.29</strong></td><td><strong>.28</strong></td></tr>
 <tr class="group"><th colspan="21">Reference (not an audio scorer)</th></tr>
 <tr><th scope="row">Inter-rater ρ (P–S)</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>.75</td><td>—</td><td>—</td><td>.76</td><td>—</td><td>—</td><td>.66</td><td>—</td><td>—</td><td>.69</td></tr>
 </tbody>
@@ -309,9 +311,11 @@ baseline at that endpoint. <sup>‡</sup> marks an ablation significantly below 
 component comparisons. Tests use 20,000 paired session-bootstrap resamples and unadjusted two-sided p &lt; .05.</p>
 <p>Main H–H rows use the two-participant mean for P. In the uninstructed-participant block,
 P is the uninstructed participant's rating for unilateral manipulations and the two-participant mean
-for natural conditions. Bilateral manipulations, unresolved roles with unequal ratings, and unconfirmed
-mock-test ratings are excluded from H–H MOS in this block. The same eligible recordings are used for
-P/S/C: turn-taking 44 dev / 96 test; affective 32 dev / 68 test. Discrimination retains all recordings.
+for natural conditions. Competitive Floor Conflict is excluded from H–H MOS in this block
+(10 dev / 20 test recordings): both participants receive instructions, so neither is uninstructed.
+Unresolved roles with unequal ratings and unconfirmed mock-test ratings are also excluded.
+The main results retain Competitive Floor Conflict. The same eligible recordings are used for
+P/S/C: turn-taking 44 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
 H–AI is unchanged. Reference rows retain the main rating protocol.</p>
 <p>Bold follows the supplied table, with maxima shown separately within the added sensitivity blocks.
 Component ablations remove scores from the same checkpoint.</p>

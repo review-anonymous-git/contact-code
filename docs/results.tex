@@ -4,7 +4,7 @@
 \caption{\textbf{Naturalness evaluation on the CONTACT development and test sets.}
 Acc.: paired accuracy (\%); C-I: C-index; P, S, C: Spearman $\rho$ with Participant, Supervisor, and Combined ratings; inter-rater rows give P--S $\rho$.
 Bold marks column maxima in the original panels and separately within each added sensitivity block, excluding reference rows. Ablations remove score components from the same checkpoint.
-On test, $^{\dagger}$ marks Ours significantly exceeding the highest-scoring baseline for the corresponding metric and rating protocol; $^{\ddagger}$ marks an ablation significantly below Ours in targeted component tests (20,000 paired session-bootstrap resamples; unadjusted two-sided $p<.05$). Added blocks use uninstructed-participant ratings for unilateral manipulations and both-participant means for natural conditions. Bilateral manipulations, unresolved roles, and unconfirmed mock-test ratings are excluded from H--H MOS. Matched P/S/C MOS counts (dev/test) are 44/96 for turn-taking and 32/68 for affect. Discrimination and H--AI results are unchanged. Baseline and ablation comparisons use the same eligible recordings and rating protocol within each block. Identical H--AI results carry identical annotations in both blocks; reference rows retain the original rating protocol.}
+On test, $^{\dagger}$ marks Ours significantly exceeding the highest-scoring baseline for the corresponding metric and rating protocol; $^{\ddagger}$ marks an ablation significantly below Ours in targeted component tests (20,000 paired session-bootstrap resamples; unadjusted two-sided $p<.05$). Added blocks use uninstructed-participant ratings for unilateral manipulations and both-participant means for natural conditions. Competitive Floor Conflict (10 dev/20 test recordings) is excluded from the added H--H MOS analysis because both participants receive instructions; unresolved roles with unequal ratings and unconfirmed mock-test ratings are also excluded. The main results retain this condition. Matched P/S/C MOS counts (dev/test) are 44/100 for turn-taking and 32/68 for affect. Discrimination and H--AI results are unchanged. Baseline and ablation comparisons use the same eligible recordings and rating protocol within each block. Identical H--AI results carry identical annotations in both blocks; reference rows retain the original rating protocol.}
 \label{tab:a2_full_unisrm}
 \vspace{-3mm}
 {\scriptsize
@@ -156,16 +156,16 @@ w/o future voice activity
 \rowcolor{proposedpanel}
 \multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Uninstructed-participant sensitivity}}} \\
 Ours
-& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & \textbf{.77} & \textbf{82.4}$^{\dagger}$ & \textbf{.72} & .43 & .54 & .53 & \textbf{.44}$^{\dagger}$ & .46$^{\dagger}$ & .48$^{\dagger}$ & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & \textbf{.77} & \textbf{82.4}$^{\dagger}$ & \textbf{.72} & .43 & .54 & .53 & \textbf{.44}$^{\dagger}$ & .44$^{\dagger}$ & \textbf{.48}$^{\dagger}$ & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
 
 w/o A--V
-& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & .75 & 74.5 & .71 & .43 & .54 & .53 & \textbf{.44} & .46 & .48 & .21 & .31 & .31 & .20 & \textbf{.29} & .26 \\
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & .75 & 74.5 & .71 & .43 & .54 & .53 & \textbf{.44} & .44 & \textbf{.48} & .21 & .31 & .31 & .20 & \textbf{.29} & .26 \\
 
 w/o future joint silence
-& \textbf{80.0} & \textbf{.78} & 84.0 & .77 & 62.5 & .62 & 60.8 & .64 & .30 & .35 & .36 & .29$^{\ddagger}$ & .25$^{\ddagger}$ & .29$^{\ddagger}$ & .22 & .12 & .23 & .10 & .17 & .17 \\
+& \textbf{80.0} & \textbf{.78} & 84.0 & .77 & 62.5 & .62 & 60.8 & .64 & .30 & .35 & .36 & .29 & .25$^{\ddagger}$ & .30$^{\ddagger}$ & .22 & .12 & .23 & .10 & .17 & .17 \\
 
 w/o future voice activity
-& 60.0 & .58 & 71.0$^{\ddagger}$ & .69$^{\ddagger}$ & \textbf{83.3} & \textbf{.77} & \textbf{82.4} & \textbf{.72} & \textbf{.44} & \textbf{.58} & \textbf{.55} & .43 & \textbf{.49} & \textbf{.50} & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
+& 60.0 & .58 & 71.0$^{\ddagger}$ & .69$^{\ddagger}$ & \textbf{83.3} & \textbf{.77} & \textbf{82.4} & \textbf{.72} & \textbf{.44} & \textbf{.58} & \textbf{.55} & .42 & \textbf{.47} & \textbf{.48} & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
 
 \rowcolor{baselinepanel}
 \multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Reference (not an audio scorer)}}} \\

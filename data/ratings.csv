@@ -326,10 +326,10 @@ hh_turn__recording-13,4.0,4.0,4.0,,,,,,,4.0,unresolved,4.0,unresolved,4.0,4.0,eq
 hh_turn__recording-14,4.0,2.0,3.0,,,,,,,4.0,unresolved,4.0,unresolved,4.0,4.0,equal_scores_role_unresolved,True,,3.0
 hh_turn__recording-19,5.0,5.0,5.0,,,,,,,5.0,uninstructed,5.0,uninstructed,,5.0,natural,True,,5.0
 hh_turn__recording-20,5.0,4.0,4.5,,,,,,,5.0,instructed,5.0,instructed,5.0,,bilateral,False,both_participants_instructed,
-hh_turn__recording-21,3.0,2.0,2.5,,,,,,,2.0,unresolved,4.0,unresolved,,,unresolved,False,unresolved_role_unequal_scores,
-hh_turn__recording-22,4.5,3.0,3.75,,,,,,,4.0,unresolved,5.0,unresolved,,,unresolved,False,unresolved_role_unequal_scores,
-hh_turn__recording-23,3.0,2.0,2.5,,,,,,,2.0,unresolved,4.0,unresolved,,,unresolved,False,unresolved_role_unequal_scores,
-hh_turn__recording-24,5.0,3.0,4.0,,,,,,,5.0,unresolved,5.0,unresolved,5.0,5.0,equal_scores_role_unresolved,True,,4.0
+hh_turn__recording-21,3.0,2.0,2.5,,,,,,,2.0,uninstructed,4.0,instructed,4.0,2.0,unilateral_matched,True,,2.0
+hh_turn__recording-22,4.5,3.0,3.75,,,,,,,4.0,uninstructed,5.0,instructed,5.0,4.0,unilateral_matched,True,,3.5
+hh_turn__recording-23,3.0,2.0,2.5,,,,,,,2.0,instructed,4.0,uninstructed,2.0,4.0,unilateral_matched,True,,3.0
+hh_turn__recording-24,5.0,3.0,4.0,,,,,,,5.0,instructed,5.0,uninstructed,5.0,5.0,unilateral_matched,True,,4.0
 hh_turn__recording-29,4.5,4.0,4.25,,,,,,,4.0,uninstructed,5.0,uninstructed,,4.5,natural,True,,4.25
 hh_turn__recording-30,2.5,2.0,2.25,,,,,,,3.0,uninstructed,2.0,instructed,2.0,3.0,unilateral_matched,True,,2.5
 hh_turn__recording-31,2.5,3.0,2.75,,,,,,,4.0,instructed,1.0,uninstructed,4.0,1.0,unilateral_matched,True,,2.0
@@ -433,10 +433,10 @@ hh_turn__recording-185,3.0,3.0,3.0,,,,,,,3.0,instructed,3.0,uninstructed,3.0,3.0
 hh_turn__recording-186,1.5,1.0,1.25,,,,,,,2.0,instructed,1.0,instructed,1.5,,bilateral,False,both_participants_instructed,
 hh_turn__recording-187,2.0,3.0,2.5,,,,,,,2.0,uninstructed,2.0,instructed,2.0,2.0,unilateral_matched,True,,2.5
 hh_turn__recording-212,5.0,5.0,5.0,,,,,,,5.0,uninstructed,5.0,uninstructed,,5.0,natural,True,,5.0
-hh_turn__recording-214,4.5,2.0,3.25,,,,,,,4.0,unresolved,5.0,unresolved,,,unresolved,False,unresolved_role_unequal_scores,
+hh_turn__recording-214,4.5,2.0,3.25,,,,,,,4.0,instructed,5.0,uninstructed,4.0,5.0,unilateral_matched,True,,3.5
 hh_turn__recording-216,5.0,3.0,4.0,,,,,,,5.0,uninstructed,5.0,instructed,5.0,5.0,unilateral_matched,True,,4.0
 hh_turn__recording-217,4.0,2.0,3.0,,,,,,,3.0,instructed,5.0,instructed,4.0,,bilateral,False,both_participants_instructed,
-hh_turn__recording-219,5.0,3.0,4.0,,,,,,,5.0,unresolved,5.0,unresolved,5.0,5.0,equal_scores_role_unresolved,True,,4.0
+hh_turn__recording-219,5.0,3.0,4.0,,,,,,,5.0,instructed,5.0,uninstructed,5.0,5.0,unilateral_matched,True,,4.0
 hh_turn__recording-220,4.5,4.0,4.25,,,,,,,4.0,uninstructed,5.0,instructed,5.0,4.0,unilateral_matched,True,,4.0
 hh_turn__recording-233,4.5,5.0,4.75,,,,,,,4.0,uninstructed,5.0,uninstructed,,4.5,natural,True,,4.75
 hh_turn__recording-234,3.0,3.0,3.0,,,,,,,3.0,instructed,3.0,instructed,3.0,,bilateral,False,both_participants_instructed,
