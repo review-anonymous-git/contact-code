@@ -10,26 +10,34 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_supplied_table_roundtrip_and_significance():
     panels = parse_table((ROOT / 'docs/results.tex').read_text())
-    assert [len(p['rows']) for p in panels] == [16, 17]
+    assert [len(p['rows']) for p in panels] == [16, 13]
     assert all(len(r['cells']) == (20 if p['kind'] == 'hh' else 18) for p in panels for r in p['rows'])
     for p in panels:
         own = [r for r in p['rows'] if r['name'] == 'Ours']
-        assert len(own) == 2
+        assert len(own) == (2 if p['kind'] == 'hh' else 1)
         if p['kind'] == 'hai':
             assert own[0]['cells'][15]['value'] == '.41'
             assert own[0]['cells'][15]['marker'] == 'dagger'
             assert own[0]['cells'][17]['marker'] == 'dagger'
-            assert [c['value'] for c in own[0]['cells']] == [c['value'] for c in own[1]['cells']]
-            assert [c['marker'] for c in own[0]['cells']] == [c['marker'] for c in own[1]['cells']]
     html = render_document(panels)
     assert html == (ROOT / 'docs/results.html').read_text()
     assert 'instructed' in html and 'NaN' not in html
     assert 'Competitive Floor Conflict' in html
     assert '10 dev / 20 test' in html
-    assert html.count('<td>') == 626
+    assert html.count('<td>') == 554
     assert html.count('<table ') == html.count('</table>') == 2
     for p in panels:
         assert table_html(p) in (ROOT / 'README.md').read_text()
+
+
+def test_sensitivity_omits_unchanged_results():
+    hh, hai = parse_table((ROOT / 'docs/results.tex').read_text())
+    sensitivity = [r for r in hh['rows'] if r['group'] == 'Uninstructed-participant sensitivity']
+    assert len(sensitivity) == 4
+    for row in sensitivity:
+        assert all(c == dict(value='--', bold=False, marker=None) for c in row['cells'][:8])
+        assert all(c['value'] != '--' for c in row['cells'][8:])
+    assert not any('sensitivity' in r['group'] for r in hai['rows'])
 
 
 def test_visible_cells_match_source():

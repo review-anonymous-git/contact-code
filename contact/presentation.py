@@ -98,8 +98,9 @@ for natural conditions. Competitive Floor Conflict is excluded from H–H MOS in
 (10 dev / 20 test recordings): both participants receive instructions, so neither is uninstructed.
 The main results retain Competitive Floor Conflict. The same eligible recordings are used for
 P/S/C: turn-taking 50 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
-H–AI is unchanged. Reference rows retain the main rating protocol.</p>
-<p>Bold follows the supplied table, with maxima shown separately within the added sensitivity blocks.
+Dashes in the sensitivity block's discrimination columns indicate unchanged results.
+Unchanged H–AI results are not repeated. Reference rows retain the main rating protocol.</p>
+<p>Bold follows the supplied table, with maxima shown separately within the H–H sensitivity block.
 Component ablations remove scores from the same checkpoint.</p>"""
 
 CSS = """body{margin:0;background:#f8fafc;color:#162330;font:15px/1.55 system-ui,sans-serif}
