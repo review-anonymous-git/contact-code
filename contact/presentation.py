@@ -96,9 +96,8 @@ component comparisons. Tests use 20,000 paired session-bootstrap resamples and u
 P is the uninstructed participant's rating for unilateral manipulations and the two-participant mean
 for natural conditions. Competitive Floor Conflict is excluded from H–H MOS in this block
 (10 dev / 20 test recordings): both participants receive instructions, so neither is uninstructed.
-Unresolved roles with unequal ratings and unconfirmed mock-test ratings are also excluded.
 The main results retain Competitive Floor Conflict. The same eligible recordings are used for
-P/S/C: turn-taking 44 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
+P/S/C: turn-taking 50 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
 H–AI is unchanged. Reference rows retain the main rating protocol.</p>
 <p>Bold follows the supplied table, with maxima shown separately within the added sensitivity blocks.
 Component ablations remove scores from the same checkpoint.</p>"""

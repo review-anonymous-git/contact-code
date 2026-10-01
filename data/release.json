@@ -7,7 +7,7 @@
   "checkpoint": "Single frozen-affect timing/silence checkpoint at step 4000",
   "sha256": {
     "splits.csv": "9528b7e917a11960dd0b203eb90c62913b136259efc298f6536d8a9402b46510",
-    "ratings.csv": "93fed409bc7764a97b5768d0078df4022e6cb2c8fcdea6cbc871c16f3372313c",
+    "ratings.csv": "5986995f5993c176cbdc48819c2e7e69a94fe6fa83654a6d06865dd19c778df2",
     "scores.csv": "b0f771c6684ef3a95492a13e264d1f38a3c69f0e5f694c122d09e668d581cb58",
     "normalizers.json": "aa552b7d4479ce2590ea5c0dfab4390a67dd2a7d69e0ea4a65b64e659e5c1d67",
     "affect_prior.json": "50c8d422846d8d7c414a5b58fc07bd6d5eea7519868573d46e929ce04880b7da",
@@ -33,6 +33,7 @@
     "unresolved": "Individual roles stay unresolved; equal scores determine both role scores without identifying the respondent",
     "hai": "Role columns are not applicable; existing dimension-specific HAI ratings are unchanged",
     "uninstructed_combined": "(uninstructed_participant_score + Supervisor)/2 on eligible H–H recordings only",
-    "privacy": "No names, questionnaire respondent IDs or demographic fields are included"
+    "privacy": "No names, questionnaire respondent IDs or demographic fields are included",
+    "identity_evidence": "Assignment names are linked to questionnaire IDs using unique booking-name matches within the recorded participant pair or explicit confirmation; private identifiers are not released."
   }
 }
