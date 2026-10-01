@@ -1,5 +1,8 @@
 # CONTACT
 
+> [!IMPORTANT]
+> **ALL samples will be released after paper publication.**
+
 Code for **CONTACT: A Human-Grounded Benchmark and Surprisal-Based Predictive
 Scorer for Conversational Naturalness**.
 
