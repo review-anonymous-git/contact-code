@@ -1,0 +1,318 @@
+\begin{table*}[t]
+\centering
+
+\caption{\textbf{Naturalness evaluation on the CONTACT development and test sets.}
+Acc.: paired accuracy (\%); C-I: C-index; P, S, C: Spearman $\rho$ with Participant, Supervisor, and Combined ratings; inter-rater rows give P--S $\rho$.
+Bold marks column maxima in the original panels and separately within each added sensitivity block, excluding reference rows. Ablations remove score components from the same checkpoint.
+On test, $^{\dagger}$ marks Ours significantly exceeding the highest-scoring baseline for the corresponding metric and rating protocol; $^{\ddagger}$ marks an ablation significantly below Ours in targeted component tests (20,000 paired session-bootstrap resamples; unadjusted two-sided $p<.05$). Added blocks use uninstructed-participant ratings for unilateral manipulations and both-participant means for natural conditions. Bilateral manipulations, unresolved roles, and unconfirmed mock-test ratings are excluded from H--H MOS. Matched P/S/C MOS counts (dev/test) are 44/96 for turn-taking and 32/68 for affect. Discrimination and H--AI results are unchanged. Baseline and ablation comparisons use the same eligible recordings and rating protocol within each block. Identical H--AI results carry identical annotations in both blocks; reference rows retain the original rating protocol.}
+\label{tab:a2_full_unisrm}
+\vspace{-3mm}
+{\scriptsize
+\setlength{\tabcolsep}{1.0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% =========================================================
+% Panel A: Human--human evaluation
+% =========================================================
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+>{\raggedright\arraybackslash}m{2.9cm}
+!{\color{black!20}\vrule width 0.25pt}
+*{4}{>{\centering\arraybackslash}m{0.46cm}}
+!{\color{black!20}\vrule width 0.25pt}
+*{4}{>{\centering\arraybackslash}m{0.46cm}}
+!{\color{black!20}\vrule width 0.25pt}
+*{6}{>{\centering\arraybackslash}m{0.46cm}}
+!{\color{black!20}\vrule width 0.25pt}
+*{6}{>{\centering\arraybackslash}m{0.46cm}}
+@{}}
+
+\toprule
+
+\parbox[c]{2.9cm}{
+    \centering
+    \textbf{(a) H--H Eval}
+    \par
+}
+&
+\multicolumn{8}{c}{\textbf{Discrimination}}
+&
+\multicolumn{12}{c}{\textbf{MOS correlation}}
+\\
+
+\cmidrule(lr){2-9}
+\cmidrule(lr){10-21}
+
+\multirow{3}{2.9cm}{\centering\textbf{Scorer}}
+&
+\multicolumn{4}{c}{
+    \cellcolor{contactturn}\textbf{Turn-Taking}
+}
+&
+\multicolumn{4}{c}{
+    \cellcolor{contactaffect}\textbf{Affective }
+}
+&
+\multicolumn{6}{c}{
+    \cellcolor{contactturn}\textbf{Turn-Taking}
+}
+&
+\multicolumn{6}{c}{
+    \cellcolor{contactaffect}\textbf{Affective }
+}
+\\
+
+\cmidrule(lr){2-5}
+\cmidrule(lr){6-9}
+\cmidrule(lr){10-15}
+\cmidrule(lr){16-21}
+
+&
+\multicolumn{2}{c}{\textit{Dev}}
+&
+\multicolumn{2}{c}{\textit{Test}}
+&
+\multicolumn{2}{c}{\textit{Dev}}
+&
+\multicolumn{2}{c}{\textit{Test}}
+&
+\multicolumn{3}{c}{\textit{Dev}}
+&
+\multicolumn{3}{c}{\textit{Test}}
+&
+\multicolumn{3}{c}{\textit{Dev}}
+&
+\multicolumn{3}{c}{\textit{Test}}
+\\
+
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-9}
+\cmidrule(lr){10-12}
+\cmidrule(lr){13-15}
+\cmidrule(lr){16-18}
+\cmidrule(lr){19-21}
+
+&
+\textbf{Acc.} & \textbf{C-I}
+&
+\textbf{Acc.} & \textbf{C-I}
+&
+\textbf{Acc.} & \textbf{C-I}
+&
+\textbf{Acc.} & \textbf{C-I}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+\\
+
+\midrule
+
+\rowcolor{baselinepanel}
+\multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Baselines}}} \\
+UTMOSv2
+& 44.0 & .47 & 50.0 & .50 & 54.2 & .51 & 51.0 & .46 & .03 & .04 & .04 & -.01 & -.02 & -.01 & .06 & -.05 & .00 & -.21 & -.07 & -.16 \\
+
+VAP
+& 70.0 & .70 & 80.0 & .76 & 45.8 & .48 & 41.2 & .47 & .19 & .12 & .17 & .12 & .16 & .15 & .08 & -.22 & -.08 & -.27 & -.19 & -.27 \\
+
+DualTurn
+& \textbf{84.0} & \textbf{.80} & 85.0 & .77 & 58.3 & .59 & 60.8 & .55 & .27 & .24 & .28 & .18 & .17 & .19 & .15 & .02 & .06 & .03 & -.03 & .00 \\
+
+Talking Turns
+& 68.0 & .65 & 72.0 & .67 & 45.8 & .49 & 54.9 & .58 & -.05 & -.02 & -.04 & .06 & .03 & .06 & .13 & .17 & .19 & .04 & .00 & .03 \\
+
+UniSRM
+& 68.0 & .65 & 63.0 & .61 & 62.5 & .56 & 42.2 & .43 & .27 & .19 & .26 & .02 & .03 & .03 & -.06 & .10 & -.01 & -.22 & -.13 & -.21 \\
+
+TRACE
+& 64.0 & .56 & 53.0 & .51 & 50.0 & .49 & 62.7 & .61 & .17 & .24 & .21 & .00 & .10 & .06 & -.06 & .12 & .06 & .17 & .15 & .17 \\
+
+TimingStats
+& 62.0 & .64 & 61.0 & .61 & 50.0 & .50 & 56.9 & .52 & .08 & .22 & .16 & .00 & .18 & .09 & -.26 & .00 & -.10 & -.07 & .10 & .01 \\
+
+\rowcolor{proposedpanel}
+\multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Ours and score-component ablations}}} \\
+Ours
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & \textbf{.77} & \textbf{82.4}$^{\dagger}$ & \textbf{.72} & \textbf{.28} & \textbf{.37} & \textbf{.35} & \textbf{.35} & \textbf{.33} & \textbf{.36}$^{\dagger}$ & \textbf{.39} & \textbf{.33} & \textbf{.40} & \textbf{.26} & \textbf{.29} & \textbf{.28} \\
+
+w/o A--V
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & .75 & 74.5 & .71 & \textbf{.28} & \textbf{.37} & \textbf{.35} & \textbf{.35} & \textbf{.33} & \textbf{.36} & .38 & .31 & .39 & .24 & \textbf{.29} & .27 \\
+
+w/o future joint silence
+& 80.0 & .78 & 84.0 & .77 & 62.5 & .62 & 60.8 & .64 & \textbf{.28} & .28 & .31 & .20 & .19$^{\ddagger}$ & .22 & .13 & .12 & .15 & .07 & .17 & .12 \\
+
+w/o future voice activity
+& 60.0 & .58 & 71.0$^{\ddagger}$ & .69$^{\ddagger}$ & \textbf{83.3} & \textbf{.77} & \textbf{82.4} & \textbf{.72} & .26 & .32 & .31 & .33 & .31 & .34 & \textbf{.39} & \textbf{.33} & \textbf{.40} & \textbf{.26} & \textbf{.29} & \textbf{.28} \\
+
+% w/o timing outputs
+% & -- & -- & -- & -- & 62.5 & .62 & 60.8 & .64 & -- & -- & -- & -- & -- & -- & .13 & .12 & .15 & .07 & .17 & .12 \\
+
+\rowcolor{proposedpanel}
+\multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Uninstructed-participant sensitivity}}} \\
+Ours
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & \textbf{.77} & \textbf{82.4}$^{\dagger}$ & \textbf{.72} & .43 & .54 & .53 & \textbf{.44}$^{\dagger}$ & .46$^{\dagger}$ & .48$^{\dagger}$ & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
+
+w/o A--V
+& 78.0 & .72 & \textbf{86.0} & \textbf{.80} & \textbf{83.3} & .75 & 74.5 & .71 & .43 & .54 & .53 & \textbf{.44} & .46 & .48 & .21 & .31 & .31 & .20 & \textbf{.29} & .26 \\
+
+w/o future joint silence
+& \textbf{80.0} & \textbf{.78} & 84.0 & .77 & 62.5 & .62 & 60.8 & .64 & .30 & .35 & .36 & .29$^{\ddagger}$ & .25$^{\ddagger}$ & .29$^{\ddagger}$ & .22 & .12 & .23 & .10 & .17 & .17 \\
+
+w/o future voice activity
+& 60.0 & .58 & 71.0$^{\ddagger}$ & .69$^{\ddagger}$ & \textbf{83.3} & \textbf{.77} & \textbf{82.4} & \textbf{.72} & \textbf{.44} & \textbf{.58} & \textbf{.55} & .43 & \textbf{.49} & \textbf{.50} & \textbf{.23} & \textbf{.33} & \textbf{.35} & \textbf{.23} & \textbf{.29} & \textbf{.28} \\
+
+\rowcolor{baselinepanel}
+\multicolumn{21}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Reference (not an audio scorer)}}} \\
+Inter-rater $\rho$ (P--S)
+& -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & .75 & -- & -- & .76 & -- & -- & .66 & -- & -- & .69 \\
+
+\end{tabular*}
+
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+>{\raggedright\arraybackslash}m{2.9cm}
+!{\color{black!20}\vrule width 0.25pt}
+*{6}{>{\centering\arraybackslash}m{0.46cm}}
+!{\color{black!20}\vrule width 0.25pt}
+*{6}{>{\centering\arraybackslash}m{0.46cm}}
+!{\color{black!20}\vrule width 0.25pt}
+*{6}{>{\centering\arraybackslash}m{0.46cm}}
+@{}}
+
+\toprule
+
+\parbox[c]{2.9cm}{
+    \centering
+    \textbf{(b) H--AI Eval}
+    \par
+}
+&
+\multicolumn{6}{c}{
+    \cellcolor{contactturn}\textbf{Turn-Taking}
+}
+&
+\multicolumn{6}{c}{
+    \cellcolor{contactaffect}\textbf{Affective}
+}
+&
+\multicolumn{6}{c}{
+    \cellcolor{contacthai}\textbf{Overall}
+}
+\\
+
+\cmidrule(lr){2-7}
+\cmidrule(lr){8-13}
+\cmidrule(lr){14-19}
+
+\multirow{2}{2.9cm}{\centering\textbf{Scorer}}
+&
+\multicolumn{3}{c}{\textit{Dev}}
+&
+\multicolumn{3}{c}{\textit{Test}}
+&
+\multicolumn{3}{c}{\textit{Dev}}
+&
+\multicolumn{3}{c}{\textit{Test}}
+&
+\multicolumn{3}{c}{\textit{Dev}}
+&
+\multicolumn{3}{c}{\textit{Test}}
+\\
+
+\cmidrule(lr){2-4}
+\cmidrule(lr){5-7}
+\cmidrule(lr){8-10}
+\cmidrule(lr){11-13}
+\cmidrule(lr){14-16}
+\cmidrule(lr){17-19}
+
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+&
+\textbf{P} & \textbf{S} & \textbf{C}
+\\
+
+\midrule
+
+\rowcolor{baselinepanel}
+\multicolumn{19}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Baselines}}} \\
+UTMOSv2
+& .12 & .22 & .20 & .07 & -.02 & .02 & .15 & .10 & .15 & .08 & -.09 & -.01 & .21 & .12 & .19 & .06 & -.06 & -.01 \\
+
+VAP
+& .20 & .20 & .24 & .23 & .19 & .23 & .09 & .09 & .09 & .21 & .19 & .22 & .21 & .12 & .19 & .20 & .18 & .21 \\
+
+DualTurn
+& .46 & \textbf{.41} & .50 & .36 & .27 & .35 & .38 & .22 & .33 & .29 & .17 & .26 & .34 & .30 & .37 & .30 & .15 & .26 \\
+
+Talking Turns
+& .05 & .06 & .08 & .21 & .09 & .18 & .06 & -.13 & -.06 & .18 & .04 & .13 & .05 & -.02 & .04 & .18 & .13 & .19 \\
+
+UniSRM
+& .25 & .29 & .30 & .18 & .14 & .18 & .18 & .16 & .15 & .19 & .23 & .24 & .21 & .16 & .20 & .18 & .23 & .22 \\
+
+TRACE
+& .10 & .09 & .09 & .11 & .09 & .10 & .08 & .24 & .17 & .10 & .04 & .06 & .16 & .21 & .19 & .09 & .14 & .13 \\
+
+TimingStats
+& .02 & -.07 & -.05 & -.08 & .09 & .01 & .06 & .13 & .09 & -.05 & .18 & .07 & .09 & .14 & .09 & .03 & .18 & .09 \\
+
+\rowcolor{proposedpanel}
+\multicolumn{19}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Ours and score-component ablations}}} \\
+Ours
+& .52 & .39 & .52 & .40 & \textbf{.31} & \textbf{.40} & \textbf{.49} & \textbf{.27} & \textbf{.41} & \textbf{.36} & .29 & \textbf{.37} & .45 & .38 & .47 & .41$^{\dagger}$ & .23 & .36$^{\dagger}$ \\
+
+w/o A--V
+& .52 & .39 & .52 & .40 & \textbf{.31} & \textbf{.40} & .47 & .26 & .39 & .34 & .23$^{\ddagger}$ & .32$^{\ddagger}$ & .44 & .38 & .47 & .40 & .21 & .34 \\
+
+w/o future joint silence
+& .42 & .37 & .46 & .33 & .26 & .33$^{\ddagger}$ & .27 & .07 & .22 & .22 & \textbf{.32} & .33 & .37 & .26 & .36 & .35 & .23 & .33 \\
+
+w/o future voice activity
+& \textbf{.55} & .39 & \textbf{.53} & \textbf{.41} & \textbf{.31} & \textbf{.40} & \textbf{.49} & \textbf{.27} & \textbf{.41} & \textbf{.36} & .29 & \textbf{.37} & \textbf{.46} & \textbf{.40} & \textbf{.49} & \textbf{.43} & .22 & \textbf{.37} \\
+
+w/o timing outputs
+& -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & .29 & .10 & .22 & .25 & \textbf{.25} & .27 \\
+
+\rowcolor{proposedpanel}
+\multicolumn{19}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Uninstructed-participant sensitivity (H--AI unchanged)}}} \\
+Ours
+& .52 & \textbf{.39} & .52 & .40 & \textbf{.31} & \textbf{.40} & \textbf{.49} & \textbf{.27} & \textbf{.41} & \textbf{.36} & .29 & \textbf{.37} & .45 & .38 & .47 & .41$^{\dagger}$ & \textbf{.23} & .36$^{\dagger}$ \\
+
+w/o A--V
+& .52 & \textbf{.39} & .52 & .40 & \textbf{.31} & \textbf{.40} & .47 & .26 & .39 & .34 & .23$^{\ddagger}$ & .32$^{\ddagger}$ & .44 & .38 & .47 & .40 & .21 & .34 \\
+
+w/o future joint silence
+& .42 & .37 & .46 & .33 & .26 & .33$^{\ddagger}$ & .27 & .07 & .22 & .22 & \textbf{.32} & .33 & .37 & .26 & .36 & .35 & \textbf{.23} & .33 \\
+
+w/o future voice activity
+& \textbf{.55} & \textbf{.39} & \textbf{.53} & \textbf{.41} & \textbf{.31} & \textbf{.40} & \textbf{.49} & \textbf{.27} & \textbf{.41} & \textbf{.36} & .29 & \textbf{.37} & \textbf{.46} & \textbf{.40} & \textbf{.49} & \textbf{.43} & .22 & \textbf{.37} \\
+
+\rowcolor{baselinepanel}
+\multicolumn{19}{@{}l@{}}{\hspace{3pt}\strut\textit{\textbf{Reference (not an audio scorer)}}} \\
+% HAI system identity
+% & .35 & .31 & .37 & .52 & .57 & .61 & .27 & .27 & .26 & .40 & .62 & .60 & .07 & .20 & .12 & .55 & .51 & .59 \\
+
+Inter-rater $\rho$ (P--S)
+& -- & -- & .58 & -- & -- & .55 & -- & -- & .38 & -- & -- & .39 & -- & -- & .55 & -- & -- & .54 \\
+
+\bottomrule
+
+\end{tabular*}
+}
+\vspace{-7mm}
+\end{table*}

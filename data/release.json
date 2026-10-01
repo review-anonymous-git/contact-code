@@ -7,10 +7,32 @@
   "checkpoint": "Single frozen-affect timing/silence checkpoint at step 4000",
   "sha256": {
     "splits.csv": "9528b7e917a11960dd0b203eb90c62913b136259efc298f6536d8a9402b46510",
-    "ratings.csv": "72d260510260797b8d02eda88ce3cfd602089f2cc728a714df001bdf002f366a",
+    "ratings.csv": "dd90c6879f4ee5ad297f8344b8882730a4fcbe605e933253965f6a452cdda7af",
     "scores.csv": "b0f771c6684ef3a95492a13e264d1f38a3c69f0e5f694c122d09e668d581cb58",
     "normalizers.json": "aa552b7d4479ce2590ea5c0dfab4390a67dd2a7d69e0ea4a65b64e659e5c1d67",
     "affect_prior.json": "50c8d422846d8d7c414a5b58fc07bd6d5eea7519868573d46e929ce04880b7da",
     "audio_preprocessing.json": "e298ba954219c2a2beef4874918eaad63a6a2c72e2c1cd80e76dc94dd318b4f0"
+  },
+  "participant_roles": {
+    "columns": [
+      "participant_1_score",
+      "participant_1_role",
+      "participant_2_score",
+      "participant_2_role",
+      "instructed_participant_score",
+      "uninstructed_participant_score",
+      "participant_role_status",
+      "uninstructed_mos_eligible",
+      "uninstructed_exclusion_reason",
+      "uninstructed_combined"
+    ],
+    "participant_order": "Questionnaire response order; not speaker IDs or audio channels",
+    "primary_columns": "Existing P/S/C columns are unchanged",
+    "natural": "Both participants are uninstructed; uninstructed_participant_score is their mean",
+    "bilateral": "Both participants are instructed; instructed_participant_score is their mean; no uninstructed score",
+    "unresolved": "Individual roles stay unresolved; equal scores determine both role scores without identifying the respondent",
+    "hai": "Role columns are not applicable; existing dimension-specific HAI ratings are unchanged",
+    "uninstructed_combined": "(uninstructed_participant_score + Supervisor)/2 on eligible H–H recordings only",
+    "privacy": "No names, questionnaire respondent IDs or demographic fields are included"
   }
 }
