@@ -88,8 +88,7 @@ only. Unchanged discrimination cells are dashed in the sensitivity block, and
 H–AI is not repeated. `docs/results.provenance.json` and `docs/results.cells.csv`
 record the table's inputs and displayed endpoints.
 
-The released split is speaker-disjoint. These are frozen retrospective
-evaluation results, not a new blind test.
+The released split is speaker-disjoint.
 
 ## Score audio
 
