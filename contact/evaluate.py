@@ -264,7 +264,7 @@ def run_evaluation(data, output, protocol='primary', bootstrap=0, seed=20260925,
     code_files = ('evaluate.py', 'metrics.py', 'protocols.py', 'readout.py')
     manifest = dict(
         release=release['version'], hh_rating_protocol=protocol, bootstrap=bootstrap, seed=seed,
-        status='Frozen retrospective evaluation split; not a new blind test',
+        status='Frozen speaker-disjoint evaluation split; not a new blind test',
         speaker_disjoint=True,
         inference='Unadjusted exploratory paired session bootstrap; no multiplicity correction',
         bootstrap_cluster='Session; verified equivalent to speaker component within each subset',

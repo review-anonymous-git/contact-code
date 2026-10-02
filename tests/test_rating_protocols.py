@@ -79,6 +79,7 @@ def test_manifests_and_paired_test_populations(evaluated):
     assert manifest['scoring_configuration']['affect_av_weight'] == .25
     assert manifest['hashes']['ratings.csv'] == hashlib.sha256((ROOT / 'data/ratings.csv').read_bytes()).hexdigest()
     assert 'not a new blind test' in manifest['status']
+    assert 'speaker-disjoint evaluation split' in manifest['status']
     tests = b['baselines'].loc[b['baselines'].corpus.eq('hh_turn')]
     assert set(tests.loc[tests.metric.eq('rho'), 'n']) == {100}
     assert set(tests.loc[tests.metric.ne('rho'), 'n']) == {120}
