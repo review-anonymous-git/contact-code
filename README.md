@@ -42,20 +42,54 @@ python -m contact.evaluate --data data --output outputs/evaluation
 ```
 
 This reads the included recording scores; it does not run the neural models.
-Outputs are `metrics.csv` (dev/test/all), `components.csv`, `table.tex`, and
-`run.json`. The LaTeX table uses `booktabs` and `graphicx`.
+The default `primary` protocol uses both H–H participants' mean for P.
+Outputs include `metrics.csv` (dev/test/all), `components.csv`, `cohorts.csv`,
+`inter_rater.csv`, `table.tex`, and `run.json`. The manifest records input hashes,
+frozen scoring settings, exclusions and each metric's actual sample count.
+Use a new output directory for each run. The LaTeX table uses `booktabs` and `graphicx`.
 
 To include paired session-bootstrap comparisons:
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-python -m contact.evaluate --data data --output outputs/bootstrap \
+python -m contact.evaluate --data data --output outputs/evaluation/primary \
   --bootstrap 20000 --seed 20260925
 ```
 
 Bootstrap outputs contain paired differences, 95% confidence intervals and
 unadjusted two-sided p-values. Comparisons use the strongest observed baseline
 at each endpoint on the evaluation split.
+
+For the uninstructed-participant analysis:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+python -m contact.evaluate --data data --hh-rating-protocol uninstructed \
+  --output outputs/evaluation/uninstructed --bootstrap 20000 --seed 20260925
+```
+
+This changes H–H MOS targets and eligibility only. It uses 50/100 TT dev/test
+recordings, excluding Competitive Floor Conflict because both participants
+receive instructions. All P/S/C correlations use the same eligible recordings.
+H–H discrimination retains all recordings, and H–AI is unchanged. Model scores,
+normalizers and fusion weights remain fixed; no audio inference is needed.
+
+To regenerate the displayed table and README from these two computed runs:
+
+```bash
+python -m contact.report --primary outputs/evaluation/primary \
+  --uninstructed outputs/evaluation/uninstructed
+python -m contact.presentation
+```
+
+The report verifies the result hashes and recomputes every displayed number and
+significance marker from the CSV outputs. The existing LaTeX supplies layout
+only. Unchanged discrimination cells are dashed in the sensitivity block, and
+H–AI is not repeated. `docs/results.provenance.json` and `docs/results.cells.csv`
+record the table's inputs and displayed endpoints.
+
+The released split is speaker-disjoint. These are frozen retrospective
+evaluation results, not a new blind test.
 
 ## Score audio
 
@@ -163,16 +197,17 @@ in [contact/model.py](contact/model.py), and the fixed settings in
 not reported for the H–H timing subset. Component ablations remove scores from
 this same checkpoint; they are not separately retrained models.
 
-### Development-set weight selection
+### Development-set weight refit
 
-To run the development-only grid search:
+To refit weights on the released development data:
 
 ```bash
 python -m contact.select_fusion --data data --output outputs/fusion_selection
 ```
 
 This saves all candidate metrics, selected weights and fitted normalizers.
-It does not change the fixed paper settings. See
+This is not an exact replay of the historical coefficient selection and does
+not change the fixed paper settings. See
 [docs/fusion_selection.md](docs/fusion_selection.md) for the grid and objective.
 
 ## Training inventory
@@ -315,7 +350,7 @@ The main results retain Competitive Floor Conflict. The same eligible recordings
 P/S/C: turn-taking 50 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
 Dashes in the sensitivity block's discrimination columns indicate unchanged results.
 Unchanged H–AI results are not repeated. Reference rows retain the main rating protocol.</p>
-<p>Bold follows the supplied table, with maxima shown separately within the H–H sensitivity block.
+<p>Bold marks column maxima, with maxima shown separately within the H–H sensitivity block.
 Component ablations remove scores from the same checkpoint.</p>
 <!-- CONTACT_RESULTS_END -->
 

@@ -1,4 +1,4 @@
-"""Select fusion weights using development recordings only."""
+"""Refit fusion weights on released dev data without changing the paper readout."""
 import argparse
 import hashlib
 import json
@@ -96,6 +96,9 @@ def main():
     frame = load_dev(args.data)
     grid, weights, normalizers = select_weights(frame)
     manifest = {
+        "purpose": "development-only refit, not a replay of historical paper-weight selection",
+        "hh_rating_protocol": "primary",
+        "paper_weights_overwritten": False,
         "selection_split": "dev",
         "development_recordings": frame.groupby("corpus").size().to_dict(),
         "development_input_sha256": hashlib.sha256(
@@ -120,7 +123,7 @@ def main():
     for name, value in (("selection.json", manifest), ("normalizers.json", normalizers)):
         (args.output / name).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
     print(json.dumps(manifest["weights"], indent=2))
-    print(f"Saved development selection to {args.output}; published settings are unchanged.")
+    print(f"Saved development refit to {args.output}; published settings are unchanged.")
 
 
 if __name__ == "__main__":

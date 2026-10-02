@@ -11,6 +11,7 @@ import pandas as pd
 from .metrics import (bootstrap_weights, discrimination, paired_summary, rho,
                       weighted_discrimination, weighted_spearman)
 from .readout import fit_normalizers, fuse
+from .protocols import PROTOCOLS, apply_rating_protocol, inter_rater_rows, mos_cohort
 
 CORPORA = ("hh_turn", "hh_emotion", "hai")
 VIEWS = ("participant", "supervisor", "combined")
@@ -103,14 +104,18 @@ def metric_rows(frame):
                 f = frame.loc[frame.corpus.eq(corpus)]
                 if split != "all":
                     f = f.loc[f.split.eq(split)]
-                common = dict(scorer=name, corpus=corpus, dimension=dimension, split=split, n=len(f))
+                common = dict(scorer=name, corpus=corpus, dimension=dimension, split=split,
+                              protocol=frame.attrs.get('hh_rating_protocol', 'primary'))
                 if corpus != "hai":
                     acc, ci = discrimination(f, f[col])
                     for metric, value in (("pair_accuracy", acc), ("c_index", ci)):
-                        rows.append(dict(common, metric=metric, rater="-", value=value))
+                        rows.append(dict(common, n=len(f), sessions=f.group_id.nunique(),
+                                         metric=metric, rater="-", value=value))
+                f = mos_cohort(f)
                 for view in VIEWS:
                     value = rho(f[col], f[f"{dimension}_{view}"])
-                    rows.append(dict(common, metric="rho", rater=view, value=value))
+                    rows.append(dict(common, n=len(f), sessions=f.group_id.nunique(),
+                                     metric="rho", rater=view, value=value))
     return pd.DataFrame(rows)
 
 
@@ -120,6 +125,9 @@ def infer(frame, repeats, seed):
     for corpus in CORPORA:
         f = frame.loc[frame.corpus.eq(corpus) & frame.split.eq("test")].reset_index(drop=True)
         weights = bootstrap_weights(f, rng, repeats)
+        eligible = f.mos_eligible.to_numpy(bool) if 'mos_eligible' in f else np.ones(len(f), dtype=bool)
+        mf = f.loc[eligible]
+        mw = weights[:, eligible]
         cache = {}
 
         def estimate(name, dim, metric, view):
@@ -127,7 +135,7 @@ def infer(frame, repeats, seed):
             key = (col, dim, metric, view)
             if key not in cache:
                 if metric == "rho":
-                    cache[key] = weighted_spearman(f[col], f[f"{dim}_{view}"], weights)
+                    cache[key] = weighted_spearman(mf[col], mf[f"{dim}_{view}"], mw)
                 else:
                     pa, ci = weighted_discrimination(f, f[col], weights)
                     cache[(col, dim, "pair_accuracy", "-")] = pa
@@ -141,8 +149,11 @@ def infer(frame, repeats, seed):
             for metric, view in endpoints:
                 full = estimate("Ours", dim, metric, view)
                 best = max(BASELINES, key=lambda n: estimate(n, dim, metric, view)[0])
+                population = mf if metric == 'rho' else f
                 common = dict(corpus=corpus, dimension=dim, metric=metric, rater=view,
-                              n=len(f), sessions=f.group_id.nunique(), repeats=repeats)
+                              protocol=frame.attrs.get('hh_rating_protocol', 'primary'),
+                              n=len(population), sessions=population.group_id.nunique(),
+                              inventory_n=len(f), repeats=repeats)
                 baseline.append(dict(common, baseline=best,
                                      **paired_summary(full, estimate(best, dim, metric, view))))
                 comparisons = []
@@ -155,11 +166,11 @@ def infer(frame, repeats, seed):
                 for name in comparisons:
                     ablations.append(dict(common, ablation=name,
                         **paired_summary(full, estimate(name, dim, metric, view))))
-        print(f"Bootstrap: {corpus}, {f.group_id.nunique()} sessions, {repeats} paired draws", flush=True)
+        print(f"Bootstrap: {corpus}, {f.group_id.nunique()} sessions, {len(mf)} MOS recordings, {repeats} paired draws", flush=True)
     return pd.DataFrame(baseline), pd.DataFrame(ablations)
 
 
-def table_tex(metrics, baseline=None, ablations=None):
+def table_tex(metrics, baseline=None, ablations=None, protocol='primary'):
     lookup = metrics.set_index(["scorer", "corpus", "dimension", "split", "metric", "rater"]).value
     baseline = pd.DataFrame() if baseline is None else baseline
     ablations = pd.DataFrame() if ablations is None else ablations
@@ -186,6 +197,9 @@ def table_tex(metrics, baseline=None, ablations=None):
 
     lines = [r"\begin{table*}[t]", r"\centering\scriptsize",
              r"\caption{CONTACT evaluation. Acc.: paired accuracy (\%); C-I: C-index; P/S/C: Spearman correlation with participant, supervisor and combined ratings. Ablations remove scores from one checkpoint."]
+    lines.append('H--H rating protocol: ' + protocol + '. ' + (
+        'MOS excludes bilateral Competitive Floor Conflict; discrimination retains all recordings. H--AI is unchanged.'
+        if protocol == 'uninstructed' else 'Participant is the mean of both H--H participants.'))
     if not baseline.empty:
         lines.append(r"$\dagger$: Ours versus the highest observed baseline; $\ddagger$: targeted Full-minus-ablation contrast. Markers use unadjusted, exploratory two-sided paired session bootstrap tests ($p<.05$).}")
     else:
@@ -213,35 +227,75 @@ def table_tex(metrics, baseline=None, ablations=None):
     return "\n".join([*lines, r"\end{table*}", ""])
 
 
+def run_evaluation(data, output, protocol='primary', bootstrap=0, seed=20260925, predictions=None):
+    data, output = Path(data), Path(output)
+    if output.exists() and any(output.iterdir()):
+        raise FileExistsError(f'Use a new output directory; refusing to overwrite {output}')
+    if bootstrap < 0:
+        raise ValueError('bootstrap must be nonnegative')
+    scoring_path = Path(__file__).resolve().parents[1] / 'configs/scoring.json'
+    scoring = json.loads(scoring_path.read_text())
+    expected = {'timing_activity_weight': .45, 'affect_av_weight': .25, 'overall_timing_weight': .5}
+    if any(scoring[k] != v for k, v in expected.items()):
+        raise ValueError('Published scoring configuration disagrees with the fixed readout')
+    frame, release = load_inputs(data, predictions)
+    frame = apply_rating_protocol(frame, protocol)
+    metrics = metric_rows(frame)
+    baseline = ablations = None
+    if bootstrap:
+        baseline, ablations = infer(frame, bootstrap, seed)
+    references = inter_rater_rows(frame, TARGETS)
+    output.mkdir(parents=True, exist_ok=True)
+    metrics.to_csv(output / 'metrics.csv', index=False)
+    references.to_csv(output / 'inter_rater.csv', index=False)
+    columns = ['recording_id', 'corpus', 'split', 'F', 'S', 'A', 'T', 'E', 'O']
+    frame[columns].to_csv(output / 'components.csv', index=False)
+    cohort_columns = ['recording_id', 'corpus', 'split', 'group_id', 'mos_eligible', 'mos_exclusion_reason']
+    frame[cohort_columns].to_csv(output / 'cohorts.csv', index=False)
+    if bootstrap:
+        baseline.to_csv(output / 'baseline_comparisons.csv', index=False)
+        ablations.to_csv(output / 'paired_ablations.csv', index=False)
+    (output / 'table.tex').write_text(table_tex(metrics, baseline, ablations, protocol))
+    hashes = {name: hashlib.sha256((data / name).read_bytes()).hexdigest()
+              for name in ['release.json', *release['sha256']]}
+    cohorts = metrics[['corpus', 'dimension', 'split', 'metric', 'rater', 'n', 'sessions']].drop_duplicates()
+    excluded = frame.loc[~frame.mos_eligible, cohort_columns].to_dict('records')
+    outputs = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in output.iterdir() if p.is_file()}
+    code_files = ('evaluate.py', 'metrics.py', 'protocols.py', 'readout.py')
+    manifest = dict(
+        release=release['version'], hh_rating_protocol=protocol, bootstrap=bootstrap, seed=seed,
+        status='Frozen retrospective evaluation split; not a new blind test',
+        speaker_disjoint=True,
+        inference='Unadjusted exploratory paired session bootstrap; no multiplicity correction',
+        bootstrap_cluster='Session; verified equivalent to speaker component within each subset',
+        bootstrap_inventory='Full test sessions; restrict MOS weights to eligible recordings after drawing',
+        baseline_selection='Highest unrounded baseline point estimate at each endpoint under this rating protocol',
+        per_metric_cohorts=cohorts.to_dict('records'), mos_exclusions=excluded,
+        hashes=hashes, scoring_configuration=scoring,
+        scoring_configuration_sha256=hashlib.sha256(scoring_path.read_bytes()).hexdigest(),
+        code_sha256={name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest() for name in code_files},
+        output_sha256=outputs,
+        predictions_sha256=(hashlib.sha256(Path(predictions).read_bytes()).hexdigest() if predictions else None),
+        normalization='Frozen released dev normalizers; no refit for rating protocols',
+        training_performed=False, audio_inference_performed=False)
+    (output / 'run.json').write_text(json.dumps(manifest, indent=2, allow_nan=False) + '\n')
+    print(f'Verified {len(frame)} recordings ({protocol}). Wrote {len(metrics)} metric rows to {output}')
+    return manifest
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--data", type=Path, default=Path("data"))
-    p.add_argument("--output", type=Path, default=Path("outputs/evaluation"))
+    p.add_argument("--output", type=Path, help="New result directory; defaults to outputs/evaluation/<protocol>")
+    p.add_argument('--hh-rating-protocol', choices=PROTOCOLS, default='primary')
     p.add_argument("--bootstrap", type=int, default=0)
     p.add_argument("--seed", type=int, default=20260925)
     p.add_argument("--predictions", type=Path, help="Replace model components with a complete inference CSV")
     args = p.parse_args()
     if args.bootstrap < 0:
         p.error("--bootstrap must be nonnegative")
-    frame, release = load_inputs(args.data, args.predictions)
-    metrics = metric_rows(frame)
-    args.output.mkdir(parents=True, exist_ok=True)
-    metrics.to_csv(args.output / "metrics.csv", index=False)
-    columns = ["recording_id", "corpus", "split", "F", "S", "A", "T", "E", "O"]
-    frame[columns].to_csv(args.output / "components.csv", index=False)
-    baseline = ablations = None
-    if args.bootstrap:
-        baseline, ablations = infer(frame, args.bootstrap, args.seed)
-        baseline.to_csv(args.output / "baseline_comparisons.csv", index=False)
-        ablations.to_csv(args.output / "paired_ablations.csv", index=False)
-    (args.output / "table.tex").write_text(table_tex(metrics, baseline, ablations))
-    (args.output / "run.json").write_text(json.dumps(dict(
-        release=release["version"], bootstrap=args.bootstrap, seed=args.seed,
-        status="Frozen retrospective evaluation split; not a new blind test",
-        inference="Unadjusted exploratory paired session bootstrap; no multiplicity correction",
-        predictions_sha256=(hashlib.sha256(args.predictions.read_bytes()).hexdigest() if args.predictions else None),
-        training_performed=False, audio_inference_performed=False), indent=2) + "\n")
-    print(f"Verified {len(frame)} recordings. Wrote {len(metrics)} metric rows to {args.output}")
+    run_evaluation(args.data, args.output or Path('outputs/evaluation') / args.hh_rating_protocol,
+                   args.hh_rating_protocol, args.bootstrap, args.seed, args.predictions)
 
 
 if __name__ == "__main__":

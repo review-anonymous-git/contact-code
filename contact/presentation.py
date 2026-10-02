@@ -1,4 +1,4 @@
-"""Render the supplied results table for the repository and a static web page."""
+"""Render the results table for the repository and a static web page."""
 import argparse
 import html
 from pathlib import Path
@@ -13,12 +13,16 @@ METHODS = {"UTMOSv2", "VAP", "DualTurn", "Talking Turns", "UniSRM", "TRACE",
 
 def parse_table(text):
     panels, panel, group, name = [], None, None, None
+    resamples = re.search(r'([\d,]+) paired session-bootstrap resamples', text)
+    counts = re.search(r'Matched P/S/C MOS counts \(dev/test\) are (\d+)/(\d+) for turn-taking and (\d+)/(\d+) for affect', text)
     for raw in text.splitlines():
         line = raw.strip()
         if line.startswith("%"):
             continue
         if line.startswith(r"\begin{tabular*}"):
-            panel = {"kind": "hh" if not panels else "hai", "rows": []}
+            panel = {"kind": "hh" if not panels else "hai", "rows": [],
+                     "bootstrap": int(resamples[1].replace(',', '')) if resamples else None,
+                     "mos_counts": tuple(map(int, counts.groups())) if counts else None}
             panels.append(panel)
             group, name = None, None
         if panel is None:
@@ -100,7 +104,7 @@ The main results retain Competitive Floor Conflict. The same eligible recordings
 P/S/C: turn-taking 50 dev / 100 test; affective 32 dev / 68 test. Discrimination retains all recordings.
 Dashes in the sensitivity block's discrimination columns indicate unchanged results.
 Unchanged H–AI results are not repeated. Reference rows retain the main rating protocol.</p>
-<p>Bold follows the supplied table, with maxima shown separately within the H–H sensitivity block.
+<p>Bold marks column maxima, with maxima shown separately within the H–H sensitivity block.
 Component ablations remove scores from the same checkpoint.</p>"""
 
 CSS = """body{margin:0;background:#f8fafc;color:#162330;font:15px/1.55 system-ui,sans-serif}
@@ -118,6 +122,17 @@ tbody tr:hover td,tbody tr:hover th[scope=row]{background:#f4f8fc}sup{font-size:
 """
 
 
+def legend(panels):
+    text = LEGEND
+    if panels[0].get('bootstrap') is not None:
+        text = text.replace('20,000 paired session-bootstrap', f"{panels[0]['bootstrap']:,} paired session-bootstrap")
+    if panels[0].get('mos_counts') is not None:
+        td, tt, ed, et = panels[0]['mos_counts']
+        text = text.replace('turn-taking 50 dev / 100 test; affective 32 dev / 68 test',
+                            f'turn-taking {td} dev / {tt} test; affective {ed} dev / {et} test')
+    return text
+
+
 def render_document(panels):
     tables = '\n'.join('<div class="table-wrap">' + table_html(p) + '</div>' for p in panels)
     return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
@@ -127,7 +142,7 @@ def render_document(panels):
             '<nav><a href="../README.md">Repository</a><a href="results.tex" download>LaTeX table</a>'
             '<a href="../data/ratings.csv" download>Participant ratings</a>'
             '<a href="../data/scores.csv" download>Model scores</a></nav>'
-            + tables + '<section class="notes" aria-label="Reading the results">' + LEGEND + '</section>'
+            + tables + '<section class="notes" aria-label="Reading the results">' + legend(panels) + '</section>'
             '<p class="downloads">The two participant ratings and assignment roles are included in ratings.csv. '
             'Questionnaire response order is not an audio-channel or speaker identity.</p>'
             '</main></body></html>\n')
@@ -141,7 +156,7 @@ def readme_section(panels):
     return ('<!-- CONTACT_RESULTS_START -->\n## Results\n\n'
             'The table below includes the uninstructed-participant analysis. '
             '[LaTeX source](docs/results.tex) · [Standalone HTML](docs/results.html)\n\n'
-            + '\n\n'.join(table_blocks) + '\n\n' + LEGEND + '\n<!-- CONTACT_RESULTS_END -->')
+            + '\n\n'.join(table_blocks) + '\n\n' + legend(panels) + '\n<!-- CONTACT_RESULTS_END -->')
 
 
 def main():

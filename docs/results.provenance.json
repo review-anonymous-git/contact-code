@@ -1,0 +1,1086 @@
+{
+  "source": "Computed evaluator outputs; template supplies layout and row labels only",
+  "primary_manifest_sha256": "bf7c5dd98b5196c8a8028703a66a17256826cdf468c90a268966dab7eca651ec",
+  "uninstructed_manifest_sha256": "101a91a4f93f070859b0a78d16acf5716fddb4004e7869ffa6239c95e5db4d0b",
+  "input_sha256": {
+    "release.json": "7f88ad527d84a6552307c739942988c340d6a4118b9a7a3c2a65212cb99881af",
+    "splits.csv": "9528b7e917a11960dd0b203eb90c62913b136259efc298f6536d8a9402b46510",
+    "ratings.csv": "5986995f5993c176cbdc48819c2e7e69a94fe6fa83654a6d06865dd19c778df2",
+    "scores.csv": "b0f771c6684ef3a95492a13e264d1f38a3c69f0e5f694c122d09e668d581cb58",
+    "normalizers.json": "aa552b7d4479ce2590ea5c0dfab4390a67dd2a7d69e0ea4a65b64e659e5c1d67",
+    "affect_prior.json": "50c8d422846d8d7c414a5b58fc07bd6d5eea7519868573d46e929ce04880b7da",
+    "audio_preprocessing.json": "e298ba954219c2a2beef4874918eaad63a6a2c72e2c1cd80e76dc94dd318b4f0"
+  },
+  "seed": 20260925,
+  "bootstrap": 20000,
+  "scoring_configuration": {
+    "sample_rate": 24000,
+    "model_frame_hz": 12.5,
+    "vad_frame_hz": 50,
+    "window_seconds": 20,
+    "overlap_seconds": 8,
+    "context_frames": 38,
+    "future_guard_frames": 25,
+    "availability_safety_seconds": 0.04,
+    "activity_horizon_seconds": 2,
+    "activity_bin_widths_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "activity_classes": 256,
+    "silence_horizon_seconds": 4,
+    "silence_stride_seconds": 1,
+    "silence_classes": 10,
+    "affect_window_seconds": 3,
+    "affect_hop_seconds": 1,
+    "affect_minimum_seconds": 1.5,
+    "affect_minimum_voiced_ratio": 0.6,
+    "affect_sigma_bins": 0.75,
+    "affect_bins_per_dimension": 8,
+    "affect_readout": "negative_absolute_both_speaker_response_mean_predictive_gain_gap",
+    "timing_activity_weight": 0.45,
+    "affect_av_weight": 0.25,
+    "overall_timing_weight": 0.5,
+    "normalization": "per_subset_dev_population_mean_std",
+    "learned_cross_branch_route": false
+  },
+  "per_metric_cohorts": {
+    "primary": [
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      }
+    ],
+    "uninstructed": [
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 60,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 50,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 50,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 50,
+        "sessions": 10
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 120,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 100,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 100,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 100,
+        "sessions": 20
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 180,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 150,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 150,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_turn",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 150,
+        "sessions": 30
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 32,
+        "sessions": 8
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 68,
+        "sessions": 17
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "pair_accuracy",
+        "rater": "-",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "c_index",
+        "rater": "-",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hh_emotion",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 100,
+        "sessions": 25
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "timing",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "affect",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "dev",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 70,
+        "sessions": 15
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "test",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 143,
+        "sessions": 30
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "participant",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "supervisor",
+        "n": 213,
+        "sessions": 45
+      },
+      {
+        "corpus": "hai",
+        "dimension": "overall",
+        "split": "all",
+        "metric": "rho",
+        "rater": "combined",
+        "n": 213,
+        "sessions": 45
+      }
+    ]
+  },
+  "reference_protocol": "primary",
+  "sensitivity_discrimination_display": "unchanged; shown as dashes",
+  "sensitivity_hai_display": "unchanged; omitted",
+  "table_sha256": "c8ea5290e9d12a206d0e76002f7719d4740f3010e9bf128ac40cba3d482e3d92",
+  "code_sha256": "3f9055dba5cddb921aed916f363e559cc722614d950acff3567037751640542b"
+}
